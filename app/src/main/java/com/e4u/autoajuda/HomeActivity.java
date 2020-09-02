@@ -19,7 +19,6 @@ public class HomeActivity extends AppCompatActivity {
     Fragment noticiasFragment = new NoticiasFragment();
     Fragment exerciciosFragment = new ExerciciosFragment();
 
-
     FragmentManager fm = getSupportFragmentManager();
     Fragment active = videoFragment;
 
@@ -28,11 +27,11 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        clickMenu();
+
         fm.beginTransaction().add(R.id.main_container, noticiasFragment, "3").hide(noticiasFragment).commit();
         fm.beginTransaction().add(R.id.main_container, exerciciosFragment, "2").hide(exerciciosFragment).commit();
         fm.beginTransaction().add(R.id.main_container,videoFragment, "1").commit();
-
-
     }
 
     private void clickMenu() {
@@ -54,7 +53,6 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
             }
         });
-
     }
 
     private void clickExercicio() {
