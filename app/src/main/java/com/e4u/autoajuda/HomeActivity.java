@@ -62,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void clickVideos() {
-
+// Navegação para tela de video.
         fm.beginTransaction().hide(active).show(videoFragment).commit();
         active = videoFragment;
     }
