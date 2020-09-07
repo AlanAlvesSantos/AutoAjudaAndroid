@@ -45,10 +45,17 @@ public class VideoFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_video, container, false);
 
         criarListaDeVideos();
 
-        WebView displayYoutubeVideo = (WebView) getView().findViewById(R.id.mWebView);
+        WebView displayYoutubeVideo = (WebView) view.findViewById(R.id.mWebView);
         displayYoutubeVideo.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -58,13 +65,8 @@ public class VideoFragment extends Fragment {
         WebSettings webSettings = displayYoutubeVideo.getSettings();
         webSettings.setJavaScriptEnabled(true);
         displayYoutubeVideo.loadData(videoModelo.getVideoURL(), "text/html", "utf-8");
-    }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
-        return inflater.inflate(R.layout.fragment_video, container, false);
+        return view;
     }
 
     private void criarListaDeVideos(){
@@ -72,6 +74,5 @@ public class VideoFragment extends Fragment {
         videoModelo.setVideoImagem("");
         videoModelo.setVideoTitle("MOTIVAÇÃO FORTE PARA TODOS OS DIAS DA SEMANA - MOTIVACIONAL NANDO PINHEIRO");
         videoModelo.setVideoURL("https://www.youtube.com/embed/ETzMjtUpKYs");
-
     }
 }
