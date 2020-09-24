@@ -28,9 +28,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         clickMenu();
-
-        fm.beginTransaction().add(R.id.main_container, noticiasFragment, "3").hide(noticiasFragment).commit();
-        fm.beginTransaction().add(R.id.main_container, exerciciosFragment, "2").hide(exerciciosFragment).commit();
         fm.beginTransaction().add(R.id.main_container,videoFragment, "1").commit();
     }
 

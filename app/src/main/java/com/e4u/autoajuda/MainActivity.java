@@ -8,12 +8,18 @@ import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 public class MainActivity extends AppCompatActivity {
+
+    LottieAnimationView lottieAnimationOB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        lottieAnimationOB = findViewById(R.id.lottieAnimationOB);
+        lottieAnimationOB.setAnimation(R.raw.butterfly_loading);
 
         Handler hd = new Handler();
         hd.postDelayed(new Runnable() {
@@ -29,6 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 // finaliza a main activity
                 finish();
             }
-        }, 3000);
+        }, 5000);
     }
 }
