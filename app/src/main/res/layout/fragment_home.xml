@@ -1,171 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragmentos.HomeFragment">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_margin="24dp"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/txtTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/home"
-            android:layout_centerHorizontal="true"
-            android:textSize="20sp"
-            android:textColor="@color/red1"
-            android:gravity="center_horizontal" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="24dp">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="@string/home"
+                android:textColor="@color/red1"
+                android:textSize="20sp" />
 
 
-        <!-- LINHA 1 -->
-        <ImageView
-            android:id="@+id/imgMotivacao"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:layout_marginTop="24dp"
-            android:src="@drawable/ic_motivacao"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/txtTitle"/>
-        <TextView
-            android:id="@+id/txtMotivacional"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imgMotivacao"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/red1"
-            android:text="@string/motivacional" />
+            <!-- LINHA 1 -->
+            <ImageView
+                android:id="@+id/imgMotivacao"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_below="@+id/txtTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_motivacao" />
+
+            <TextView
+                android:id="@+id/txtMotivacional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgMotivacao"
+                android:layout_centerHorizontal="true"
+                android:text="@string/motivacional"
+                android:textColor="@color/red1" />
 
 
-        <!-- LINHA 2 -->
-        <ImageView
-            android:id="@+id/imgRelacionamento"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginStart="24dp"
-            android:src="@drawable/ic_relacionamento"
-            android:layout_below="@+id/txtMotivacional"/>
-        <TextView
-            android:id="@+id/txtRelacionamento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imgRelacionamento"
-            android:gravity="center_horizontal"
-            android:layout_marginStart="24dp"
-            android:textColor="@color/red1"
-            android:text="@string/auto_ajuda_para_amor" />
+            <!-- LINHA 2 -->
+            <ImageView
+                android:id="@+id/imgRelacionamento"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_below="@+id/txtMotivacional"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_relacionamento" />
+
+            <TextView
+                android:id="@+id/txtRelacionamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgRelacionamento"
+                android:layout_marginStart="24dp"
+                android:gravity="center_horizontal"
+                android:text="@string/auto_ajuda_para_amor"
+                android:textColor="@color/red1" />
 
 
+            <ImageView
+                android:id="@+id/imgAmizade"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_below="@+id/txtMotivacional"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_amizades" />
 
-        <ImageView
-            android:id="@+id/imgAmizade"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_amizades"
-            android:layout_below="@+id/txtMotivacional"/>
-        <TextView
-            android:id="@+id/txtAmizade"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imgAmizade"
-            android:gravity="center_horizontal"
-            android:layout_marginEnd="24dp"
-            android:layout_alignParentEnd="true"
-            android:textColor="@color/red1"
-            android:text="@string/auto_ajuda_para_amizades" />
-
-
-        <!-- LINHA 3 -->
-
-        <ImageView
-            android:id="@+id/imgTrabalho"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:layout_marginTop="24dp"
-            android:src="@drawable/ic_trabalho"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/txtAmizade"/>
-        <TextView
-            android:id="@+id/txtTrabalho"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imgTrabalho"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/red1"
-            android:text="@string/trabalho" />
+            <TextView
+                android:id="@+id/txtAmizade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgAmizade"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="24dp"
+                android:gravity="center_horizontal"
+                android:text="@string/auto_ajuda_para_amizades"
+                android:textColor="@color/red1" />
 
 
-        <!-- LINHA 4 -->
+            <!-- LINHA 3 -->
 
-        <ImageView
-            android:id="@+id/imgEstudos"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginStart="24dp"
-            android:src="@drawable/ic_estudos"
-            android:layout_below="@+id/txtTrabalho"/>
-        <TextView
-            android:id="@+id/txtEstudos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imgEstudos"
-            android:gravity="center_horizontal"
-            android:layout_marginStart="24dp"
-            android:textColor="@color/red1"
-            android:text="@string/estudos" />
+            <ImageView
+                android:id="@+id/imgTrabalho"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_below="@+id/txtAmizade"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_trabalho" />
 
-
-
-        <ImageView
-            android:id="@+id/imgEspiritual"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_estudos"
-            android:layout_below="@+id/txtTrabalho"/>
-        <TextView
-            android:id="@+id/txtEspiritual"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imgEspiritual"
-            android:gravity="center_horizontal"
-            android:layout_marginEnd="24dp"
-            android:layout_alignParentEnd="true"
-            android:textColor="@color/red1"
-            android:text="@string/espiritual" />
+            <TextView
+                android:id="@+id/txtTrabalho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgTrabalho"
+                android:layout_centerHorizontal="true"
+                android:text="@string/trabalho"
+                android:textColor="@color/red1" />
 
 
-        <!-- LINHA 5 -->
+            <!-- LINHA 4 -->
 
-        <ImageView
-            android:id="@+id/imgPessoaMelhor"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:layout_marginTop="24dp"
-            android:src="@drawable/ic_pessoa_melhor"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/txtEspiritual"/>
-        <TextView
-            android:id="@+id/txtPessoaMelhor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imgPessoaMelhor"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/red1"
-            android:gravity="center_horizontal"
-            android:text="@string/seja_uma_pessoa_melhor" />
+            <ImageView
+                android:id="@+id/imgEstudos"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_below="@+id/txtTrabalho"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_estudos" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/txtEstudos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgEstudos"
+                android:layout_marginStart="24dp"
+                android:gravity="center_horizontal"
+                android:text="@string/estudos"
+                android:textColor="@color/red1" />
 
+
+            <ImageView
+                android:id="@+id/imgEspiritual"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_below="@+id/txtTrabalho"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_estudos" />
+
+            <TextView
+                android:id="@+id/txtEspiritual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgEspiritual"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="24dp"
+                android:gravity="center_horizontal"
+                android:text="@string/espiritual"
+                android:textColor="@color/red1" />
+
+
+            <!-- LINHA 5 -->
+
+            <ImageView
+                android:id="@+id/imgPessoaMelhor"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_below="@+id/txtEspiritual"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_pessoa_melhor" />
+
+            <TextView
+                android:id="@+id/txtPessoaMelhor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgPessoaMelhor"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="48dp"
+                android:gravity="center_horizontal"
+                android:text="@string/seja_uma_pessoa_melhor"
+                android:textColor="@color/red1" />
+
+        </RelativeLayout>
+
+    </ScrollView>
 </FrameLayout>
