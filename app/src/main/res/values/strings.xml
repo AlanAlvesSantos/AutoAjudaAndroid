@@ -12,4 +12,7 @@
     <string name="youtube_key">AIzaSyD-6pVEZ7znMz6JYgxgh3vFndPDrgLJuus</string>
     <string name="voltar_lista">Voltar para a lista</string>
     <string name="home">Home</string>
+    <string name="motivacional">Motivacional</string>
+    <string name="auto_ajuda_para_amor">Auto ajuda\npara o amor</string>
+    <string name="auto_ajuda_para_amizades">Auto ajuda\npara amizades</string>
 </resources>

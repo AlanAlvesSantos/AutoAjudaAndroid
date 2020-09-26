@@ -22,7 +22,7 @@ public class HomeActivity extends AppCompatActivity {
     Fragment homeFragment = new HomeFragment();
 
     FragmentManager fm = getSupportFragmentManager();
-    Fragment active = videoFragment;
+    Fragment active = homeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -14,7 +14,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@raw/star"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintWidth_percent="0.5"
         android:visibility="visible"
