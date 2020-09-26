@@ -191,7 +191,7 @@ public class VideoFragment extends Fragment {
                 videoModelo = new VideoModelo();
                 JSONObject object = array.getJSONObject(i);
                 videoModelo.setVideoTitle(object.getString("title"));
-                videoModelo.setVideoURL(object.getString("id"));
+                videoModelo.setVideoURL(object.getString("url"));
                 listaVideos.add(videoModelo);
             }
 

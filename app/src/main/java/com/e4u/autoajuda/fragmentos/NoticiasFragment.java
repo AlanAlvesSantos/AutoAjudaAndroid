@@ -33,6 +33,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.e4u.autoajuda.Utilities.NEWS_URL;
@@ -44,13 +45,12 @@ import static com.e4u.autoajuda.Utilities.NEWS_URL;
  */
 public class NoticiasFragment extends Fragment {
 
-    RecyclerView rvGoodNews;
+    RecyclerView rvNoticias;
     Activity activity;
-    List<NewsModelo> listaNoticias;
+    List<NewsModelo> listaNoticias = new ArrayList<>();
     NewsAdapter adapter;
     String parsedString = "";
     public int indice = 1;
-    ProgressDialog dialog = null;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -90,7 +90,7 @@ public class NoticiasFragment extends Fragment {
 
     private void initComponents(View v) {
 
-        rvGoodNews = v.findViewById(R.id.rvGoodNews);
+        rvNoticias = v.findViewById(R.id.rvNoticias);
         getNewsFromServer();
     }
 
@@ -140,10 +140,6 @@ public class NoticiasFragment extends Fragment {
                     } catch (Exception e) {
                         Log.d("MyTag", e.toString());
                         indice--;
-
-                        if (dialog != null) {
-                            dialog.dismiss();
-                        }
                     }
 
                     activity.runOnUiThread(new Runnable() {
@@ -213,9 +209,7 @@ public class NoticiasFragment extends Fragment {
             carregarLista();
 
         } catch (JSONException ex) {
-            if (this.dialog != null) {
-                this.dialog.dismiss();
-            }
+
         }
     }
 
@@ -224,17 +218,13 @@ public class NoticiasFragment extends Fragment {
         adapter = new NewsAdapter(activity, listaNoticias);
 
         if (listaNoticias.size() > 0) {
-            rvGoodNews.setVisibility(View.VISIBLE);
+            rvNoticias.setVisibility(View.VISIBLE);
             RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getContext(), 1);
-            rvGoodNews.setLayoutManager(mLayoutManager);
-            rvGoodNews.setItemAnimator(new DefaultItemAnimator());
-            rvGoodNews.setAdapter(adapter);
+            rvNoticias.setLayoutManager(mLayoutManager);
+            rvNoticias.setItemAnimator(new DefaultItemAnimator());
+            rvNoticias.setAdapter(adapter);
         } else {
-            rvGoodNews.setVisibility(View.INVISIBLE);
-        }
-
-        if (this.dialog != null) {
-            this.dialog.dismiss();
+            rvNoticias.setVisibility(View.INVISIBLE);
         }
     }
 }
