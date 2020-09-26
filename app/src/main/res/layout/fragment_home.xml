@@ -41,9 +41,6 @@
             android:text="@string/motivacional" />
 
 
-
-
-
         <!-- LINHA 2 -->
         <ImageView
             android:id="@+id/imgRelacionamento"
@@ -86,14 +83,88 @@
             android:text="@string/auto_ajuda_para_amizades" />
 
 
-
         <!-- LINHA 3 -->
+
+        <ImageView
+            android:id="@+id/imgTrabalho"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_trabalho"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtAmizade"/>
+        <TextView
+            android:id="@+id/txtTrabalho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgTrabalho"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/red1"
+            android:text="@string/trabalho" />
 
 
         <!-- LINHA 4 -->
 
+        <ImageView
+            android:id="@+id/imgEstudos"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/ic_estudos"
+            android:layout_below="@+id/txtTrabalho"/>
+        <TextView
+            android:id="@+id/txtEstudos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgEstudos"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="24dp"
+            android:textColor="@color/red1"
+            android:text="@string/estudos" />
+
+
+
+        <ImageView
+            android:id="@+id/imgEspiritual"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_estudos"
+            android:layout_below="@+id/txtTrabalho"/>
+        <TextView
+            android:id="@+id/txtEspiritual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgEspiritual"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="24dp"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/red1"
+            android:text="@string/espiritual" />
+
 
         <!-- LINHA 5 -->
+
+        <ImageView
+            android:id="@+id/imgPessoaMelhor"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_pessoa_melhor"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtEspiritual"/>
+        <TextView
+            android:id="@+id/txtPessoaMelhor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgPessoaMelhor"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/red1"
+            android:gravity="center_horizontal"
+            android:text="@string/seja_uma_pessoa_melhor" />
 
     </RelativeLayout>
 
