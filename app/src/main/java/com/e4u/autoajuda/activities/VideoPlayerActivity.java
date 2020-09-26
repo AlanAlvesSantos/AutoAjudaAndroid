@@ -87,9 +87,4 @@ public class VideoPlayerActivity extends YouTubeBaseActivity implements YouTubeP
 
     }
 
-    @Override
-    public void onBackPressed()
-    {
-
-    }
 }

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.e4u.autoajuda.fragmentos.ExerciciosFragment;
+import com.e4u.autoajuda.fragmentos.HomeFragment;
 import com.e4u.autoajuda.fragmentos.NoticiasFragment;
 import com.e4u.autoajuda.fragmentos.VideoFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -18,6 +19,7 @@ public class HomeActivity extends AppCompatActivity {
     Fragment videoFragment = new VideoFragment();
     Fragment noticiasFragment = new NoticiasFragment();
     Fragment exerciciosFragment = new ExerciciosFragment();
+    Fragment homeFragment = new HomeFragment();
 
     FragmentManager fm = getSupportFragmentManager();
     Fragment active = videoFragment;
@@ -30,7 +32,8 @@ public class HomeActivity extends AppCompatActivity {
         clickMenu();
         fm.beginTransaction().add(R.id.main_container, noticiasFragment, "3").hide(noticiasFragment).commit();
         fm.beginTransaction().add(R.id.main_container, exerciciosFragment, "2").hide(exerciciosFragment).commit();
-        fm.beginTransaction().add(R.id.main_container,videoFragment, "1").commit();
+        fm.beginTransaction().add(R.id.main_container, videoFragment, "1").hide(videoFragment).commit();
+        fm.beginTransaction().add(R.id.main_container,homeFragment, "0").commit();
     }
 
     private void clickMenu() {
@@ -39,6 +42,9 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
+                    case R.id.action_home:
+                        clickHome();
+                        break;
                     case R.id.action_exercicios:
                         clickExercicio();
                         break;
@@ -52,6 +58,12 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    private void clickHome() {
+
+        fm.beginTransaction().hide(active).show(homeFragment).commit();
+        active = homeFragment;
     }
 
     private void clickExercicio() {
