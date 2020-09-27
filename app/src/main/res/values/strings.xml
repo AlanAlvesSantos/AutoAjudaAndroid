@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Auto Ajuda</string>
 
-    <string name="titulo1">Auto Ajuda</string>
-    <string name="titulo2">Um aplicativo para te ajudar a viver melhor</string>
+    <string name="titulo1">Auto Ajuda App\nUm aplicativo para te ajudar\na viver melhor</string>
     <string name="titulo_home">Tela Principal</string>
     <string name="video">Vídeo</string>
     <string name="videos">Vídeos</string>
