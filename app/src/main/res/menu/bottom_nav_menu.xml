@@ -20,10 +20,4 @@
         android:icon="@drawable/news"
         android:title="@string/noticias"
         app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/action_exercicios"
-        android:enabled="true"
-        android:icon="@drawable/note"
-        android:title="@string/exercicios"
-        app:showAsAction="ifRoom" />
 </menu>

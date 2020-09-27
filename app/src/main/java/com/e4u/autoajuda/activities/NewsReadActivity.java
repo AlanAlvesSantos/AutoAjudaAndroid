@@ -32,7 +32,7 @@ public class NewsReadActivity extends AppCompatActivity {
 
         txtTitle = findViewById(R.id.txtTitleNews);
         txtDesc = findViewById(R.id.txtDescricaoNews);
-        txtSubTitle = findViewById(R.id.txtSubtitle);
+        txtSubTitle = findViewById(R.id.txtSubtitleNews);
         imgNews = findViewById(R.id.imgNews);
         loader = findViewById(R.id.loader);
 

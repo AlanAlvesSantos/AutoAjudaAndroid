@@ -1,12 +1,15 @@
 package com.e4u.autoajuda;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-
-import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.e4u.autoajuda.fragmentos.ExerciciosFragment;
 import com.e4u.autoajuda.fragmentos.HomeFragment;
@@ -18,7 +21,6 @@ public class HomeActivity extends AppCompatActivity {
 
     Fragment videoFragment = new VideoFragment();
     Fragment noticiasFragment = new NoticiasFragment();
-    Fragment exerciciosFragment = new ExerciciosFragment();
     Fragment homeFragment = new HomeFragment();
 
     FragmentManager fm = getSupportFragmentManager();
@@ -31,9 +33,9 @@ public class HomeActivity extends AppCompatActivity {
 
         clickMenu();
         fm.beginTransaction().add(R.id.main_container, noticiasFragment, "3").hide(noticiasFragment).commit();
-        fm.beginTransaction().add(R.id.main_container, exerciciosFragment, "2").hide(exerciciosFragment).commit();
-        fm.beginTransaction().add(R.id.main_container, videoFragment, "1").hide(videoFragment).commit();
-        fm.beginTransaction().add(R.id.main_container,homeFragment, "0").commit();
+        fm.beginTransaction().add(R.id.main_container, videoFragment, "2").hide(videoFragment).commit();
+        fm.beginTransaction().add(R.id.main_container, homeFragment, "1").commit();
+        active = homeFragment;
     }
 
     private void clickMenu() {
@@ -44,9 +46,6 @@ public class HomeActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.action_home:
                         clickHome();
-                        break;
-                    case R.id.action_exercicios:
-                        clickExercicio();
                         break;
                     case R.id.action_noticia:
                         clickNoticias();
@@ -61,25 +60,16 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void clickHome() {
-
         fm.beginTransaction().hide(active).show(homeFragment).commit();
         active = homeFragment;
     }
 
-    private void clickExercicio() {
-
-        fm.beginTransaction().hide(active).show(exerciciosFragment).commit();
-        active = exerciciosFragment;
-    }
-
     private void clickVideos() {
-        // Navegação para tela de video.
         fm.beginTransaction().hide(active).show(videoFragment).commit();
         active = videoFragment;
     }
 
     private void clickNoticias() {
-
         fm.beginTransaction().hide(active).show(noticiasFragment).commit();
         active = noticiasFragment;
     }

@@ -22,6 +22,7 @@
                 android:textColor="@color/red1"
                 android:layout_margin="24dp"
                 android:textSize="20sp"
+                android:textStyle="bold"
                 android:gravity="center_horizontal"
                 android:text="@string/noticias" />
 

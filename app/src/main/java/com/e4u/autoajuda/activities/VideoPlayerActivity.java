@@ -86,5 +86,4 @@ public class VideoPlayerActivity extends YouTubeBaseActivity implements YouTubeP
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
 
     }
-
 }

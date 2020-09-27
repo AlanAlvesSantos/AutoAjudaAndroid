@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".fragmentos.HomeFragment">
 
     <ScrollView
@@ -23,158 +24,197 @@
                 android:gravity="center_horizontal"
                 android:text="@string/home"
                 android:textColor="@color/red1"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
 
             <!-- LINHA 1 -->
-            <ImageView
-                android:id="@+id/imgMotivacao"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
+
+            <LinearLayout
+                android:id="@+id/llMotivacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/txtTitle"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="24dp"
-                android:src="@drawable/ic_motivacao" />
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtMotivacional"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imgMotivacao"
-                android:layout_centerHorizontal="true"
-                android:text="@string/motivacional"
-                android:textColor="@color/red1" />
+                <ImageView
+                    android:id="@+id/imgMotivacao"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_motivacao" />
 
+                <TextView
+                    android:id="@+id/txtMotivacional"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/motivacional"
+                    android:textColor="@color/red1" />
+            </LinearLayout>
 
             <!-- LINHA 2 -->
-            <ImageView
-                android:id="@+id/imgRelacionamento"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_below="@+id/txtMotivacional"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:src="@drawable/ic_relacionamento" />
 
-            <TextView
-                android:id="@+id/txtRelacionamento"
+            <LinearLayout
+                android:id="@+id/llRelacionamento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imgRelacionamento"
+                android:layout_below="@+id/llMotivacao"
+                android:layout_marginTop="24dp"
                 android:layout_marginStart="24dp"
-                android:gravity="center_horizontal"
-                android:text="@string/auto_ajuda_para_amor"
-                android:textColor="@color/red1" />
+                android:gravity="center"
+                android:orientation="vertical">
 
+                <ImageView
+                    android:id="@+id/imgRelacionamento"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_relacionamento" />
 
-            <ImageView
-                android:id="@+id/imgAmizade"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_below="@+id/txtMotivacional"
+                <TextView
+                    android:id="@+id/txtRelacionamento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/auto_ajuda_para_amor"
+                    android:textColor="@color/red1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAmizade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llMotivacao"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:src="@drawable/ic_amizades" />
-
-            <TextView
-                android:id="@+id/txtAmizade"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imgAmizade"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="24dp"
                 android:gravity="center_horizontal"
-                android:text="@string/auto_ajuda_para_amizades"
-                android:textColor="@color/red1" />
+                android:orientation="vertical">
 
+                <ImageView
+                    android:id="@+id/imgAmizade"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_amizades" />
+
+                <TextView
+                    android:id="@+id/txtAmizade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/auto_ajuda_para_amizades"
+                    android:textColor="@color/red1" />
+
+            </LinearLayout>
 
             <!-- LINHA 3 -->
 
-            <ImageView
-                android:id="@+id/imgTrabalho"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_below="@+id/txtAmizade"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="24dp"
-                android:src="@drawable/ic_trabalho" />
-
-            <TextView
-                android:id="@+id/txtTrabalho"
+            <LinearLayout
+                android:id="@+id/llTrabalho"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imgTrabalho"
+                android:layout_below="@+id/llAmizade"
                 android:layout_centerHorizontal="true"
-                android:text="@string/trabalho"
-                android:textColor="@color/red1" />
+                android:layout_marginTop="24dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
+                <ImageView
+                    android:id="@+id/imgTrabalho"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_trabalho" />
+
+                <TextView
+                    android:id="@+id/txtTrabalho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/trabalho"
+                    android:textColor="@color/red1" />
+            </LinearLayout>
 
             <!-- LINHA 4 -->
 
-            <ImageView
-                android:id="@+id/imgEstudos"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_below="@+id/txtTrabalho"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:src="@drawable/ic_estudos" />
-
-            <TextView
-                android:id="@+id/txtEstudos"
+            <LinearLayout
+                android:id="@+id/llEstudos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imgEstudos"
+                android:layout_below="@+id/llTrabalho"
+                android:layout_marginTop="24dp"
                 android:layout_marginStart="24dp"
                 android:gravity="center_horizontal"
-                android:text="@string/estudos"
-                android:textColor="@color/red1" />
+                android:orientation="vertical">
 
+                <ImageView
+                    android:id="@+id/imgEstudos"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_estudos" />
+                <TextView
+                    android:id="@+id/txtEstudos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/estudos"
+                    android:textColor="@color/red1" />
+            </LinearLayout>
 
-            <ImageView
-                android:id="@+id/imgEspiritual"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_below="@+id/txtTrabalho"
+            <LinearLayout
+                android:id="@+id/llEspiritual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llTrabalho"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:src="@drawable/ic_estudos" />
-
-            <TextView
-                android:id="@+id/txtEspiritual"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imgEspiritual"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="24dp"
                 android:gravity="center_horizontal"
-                android:text="@string/espiritual"
-                android:textColor="@color/red1" />
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgEspiritual"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_religioso" />
+                <TextView
+                    android:id="@+id/txtEspiritual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/espiritual"
+                    android:textColor="@color/red1" />
+
+            </LinearLayout>
 
 
             <!-- LINHA 5 -->
 
-            <ImageView
-                android:id="@+id/imgPessoaMelhor"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_below="@+id/txtEspiritual"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="24dp"
-                android:src="@drawable/ic_pessoa_melhor" />
-
-            <TextView
-                android:id="@+id/txtPessoaMelhor"
+            <LinearLayout
+                android:id="@+id/llPessoaMelhor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imgPessoaMelhor"
+                android:layout_below="@+id/llEspiritual"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
                 android:layout_marginBottom="48dp"
                 android:gravity="center_horizontal"
-                android:text="@string/seja_uma_pessoa_melhor"
-                android:textColor="@color/red1" />
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgPessoaMelhor"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_pessoa_melhor" />
+
+                <TextView
+                    android:id="@+id/txtPessoaMelhor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/seja_uma_pessoa_melhor"
+                    android:textColor="@color/red1" />
+
+            </LinearLayout>
 
         </RelativeLayout>
 

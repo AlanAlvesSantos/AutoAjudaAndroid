@@ -11,37 +11,39 @@
         android:id="@+id/txtTituloVideo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:textSize="20sp"
+        android:layout_marginTop="24dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
         android:gravity="center_horizontal"
-        android:text="@string/video" />
+        android:textColor="@color/red1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <view
         android:id="@+id/youtubePlayerAPIMain"
         class="com.google.android.youtube.player.YouTubePlayerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnBackVideoList"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
         android:layout_marginTop="32dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textColor="@color/white"
+        android:padding="24dp"
         android:background="@drawable/button_close"
         android:text="@string/voltar_lista"
-        app:layout_constraintTop_toBottomOf="@+id/youtubePlayerAPIMain"
+        android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youtubePlayerAPIMain" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

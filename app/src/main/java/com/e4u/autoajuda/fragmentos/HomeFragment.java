@@ -1,5 +1,6 @@
 package com.e4u.autoajuda.fragmentos;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,14 +8,19 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.e4u.autoajuda.R;
+import com.e4u.autoajuda.activities.RelacionamentoActivity;
+import com.e4u.autoajuda.activities.VideoPlayerActivity;
 
 public class HomeFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    LinearLayout llRelacionamento;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -47,7 +53,22 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_home, container, false);
-
+        initComponent(v);
         return v;
+    }
+
+    private void initComponent(View view){
+
+        llRelacionamento = view.findViewById(R.id.llRelacionamento);
+        llRelacionamento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getContext(), RelacionamentoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
