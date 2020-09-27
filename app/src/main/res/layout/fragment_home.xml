@@ -218,6 +218,30 @@
             <!-- LINHA 6 -->
 
 
+            <LinearLayout
+                android:id="@+id/llSaude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llExercicios"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="24dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/ic_saude" />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saude"
+                    android:textColor="@color/red1" />
+            </LinearLayout>
+
+
         </RelativeLayout>
 
     </ScrollView>

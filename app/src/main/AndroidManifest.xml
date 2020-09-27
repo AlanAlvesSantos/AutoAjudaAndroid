@@ -13,7 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.RelacionamentoActivity"></activity>
+        <activity android:name=".activities.SaudeActivity"></activity>
+        <activity android:name=".activities.PessoaMelhorActivity" />
+        <activity android:name=".activities.ExerciciosActivity" />
+        <activity android:name=".activities.EstudosActivity" />
+        <activity android:name=".activities.TrabalhoActivity" />
+        <activity android:name=".activities.AmizadeActivity" />
+        <activity android:name=".activities.MotivacionalActivity" />
+        <activity android:name=".activities.RelacionamentoActivity" />
         <activity android:name=".activities.NewsReadActivity" />
         <activity
             android:name=".activities.VideoPlayerActivity"
