@@ -10,8 +10,6 @@ import com.e4u.autoajuda.R;
 
 public class RelacionamentoActivity extends AppCompatActivity {
 
-    LottieAnimationView lottieRelacionamento;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +19,6 @@ public class RelacionamentoActivity extends AppCompatActivity {
 
     private void initComponent(){
 
-        lottieRelacionamento = findViewById(R.id.lottieRelacionamento);
-        lottieRelacionamento.setAnimation(R.raw.amor_lottie);
+        
     }
 }
