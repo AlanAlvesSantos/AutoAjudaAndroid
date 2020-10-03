@@ -51,4 +51,8 @@ dependencies {
 
     //Circle imageView
     implementation 'de.hdodenhof:circleimageview:2.1.0'
+
+    //Resize all devices
+    implementation 'com.intuit.ssp:ssp-android:1.0.5'
+    implementation 'com.intuit.sdp:sdp-android:1.0.5'
 }

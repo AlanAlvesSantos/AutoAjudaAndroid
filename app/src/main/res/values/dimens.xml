@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="title_text">18sp</dimen>
+
+    <dimen name="title_text">@dimen/_13ssp</dimen>
+    <dimen name="splash_text_size">@dimen/_14ssp</dimen>
+    <dimen name="normal_text">@dimen/_12ssp</dimen>
+
+    <dimen name="margin">@dimen/_12sdp</dimen>
+    <dimen name="splash_image_size">@dimen/_124sdp</dimen>
+    <dimen name="image_height">@dimen/_200sdp</dimen>
+
 </resources>
