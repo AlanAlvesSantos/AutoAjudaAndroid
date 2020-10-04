@@ -7,6 +7,7 @@
 
     <dimen name="margin">@dimen/_12sdp</dimen>
     <dimen name="splash_image_size">@dimen/_124sdp</dimen>
+    <dimen name="lottie_love_animation">@dimen/_160sdp</dimen>
     <dimen name="image_height">@dimen/_200sdp</dimen>
 
 </resources>

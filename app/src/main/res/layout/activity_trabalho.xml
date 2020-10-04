@@ -4,6 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margin"
     tools:context=".activities.TrabalhoActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtTituloTrabalho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/trabalho"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/title_text"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgTrabalho"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtTituloTrabalho"
+                android:layout_marginTop="@dimen/margin"
+                android:scaleType="fitXY"
+                android:src="@drawable/work" />
+
+            <TextView
+                android:id="@+id/txtTextoTrab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgTrabalho"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/texto_sobre_trabalho"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

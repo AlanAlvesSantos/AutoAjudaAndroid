@@ -45,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imgMotivacional"
                 android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
                 android:text="@string/textomotivacional"
                 android:textColor="@color/red1"
                 android:textSize="@dimen/normal_text" />

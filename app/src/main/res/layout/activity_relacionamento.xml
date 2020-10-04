@@ -45,9 +45,20 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imgRelacionamento"
                 android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
                 android:text="@string/relacionamentostexto"
                 android:textColor="@color/red1"
                 android:textSize="@dimen/normal_text" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationRelacionamento"
+                android:layout_width="@dimen/lottie_love_animation"
+                android:layout_height="@dimen/lottie_love_animation"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtTextoRelacionamento1"
+                android:visibility="visible"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
 
 
         </RelativeLayout>
