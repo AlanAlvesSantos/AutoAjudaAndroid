@@ -4,6 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margin"
     tools:context=".activities.PessoaMelhorActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtTituloPessoaMelhor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Seja Uma Pessoa Melhor"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/title_text"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgPessoaMelhor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtTituloPessoaMelhor"
+                android:layout_marginTop="23dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/imgpessoamelhor" />
+
+            <TextView
+                android:id="@+id/txtPessoaMelhor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgPessoaMelhor"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/seja_uma_pessoa_melhor"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
