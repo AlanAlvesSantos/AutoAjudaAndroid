@@ -4,6 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.AmizadeActivity">
+    android:layout_marginTop="@dimen/margin"
+    tools:context=".activities.RelacionamentoActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/auto_ajuda_para_amizades"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/title_text"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgAmizade"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtTitulo"
+                android:layout_marginTop="@dimen/margin"
+                android:scaleType="fitXY"
+                android:src="@drawable/imgamizade" />
+
+            <TextView
+                android:id="@+id/txtTextoAmizade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgAmizade"
+                android:layout_margin="@dimen/margin"
+                android:text="@string/amizadetexto"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,6 +19,6 @@ public class RelacionamentoActivity extends AppCompatActivity {
 
     private void initComponent(){
 
-        
+
     }
 }
