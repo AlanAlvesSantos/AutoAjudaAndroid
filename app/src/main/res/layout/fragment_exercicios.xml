@@ -76,6 +76,50 @@
 
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardExercicio3"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardExercicio2"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <RelativeLayout
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/imgrelacionamento"
+                        android:transitionName="img" />
+
+                    <ImageView
+                        android:id="@+id/shadow_bottom3"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_alignBottom="@+id/img3"
+                        android:src="@drawable/bottom_shadow" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="150dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="@string/exercic_o_do_dia"
+                        android:textColor="@android:color/white" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cardExercicio2"
                 app:cardCornerRadius="6dp"
                 app:cardElevation="8dp"
