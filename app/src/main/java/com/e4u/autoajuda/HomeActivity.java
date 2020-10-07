@@ -1,17 +1,13 @@
 package com.e4u.autoajuda;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.e4u.autoajuda.fragmentos.ExerciciosFragment;
 import com.e4u.autoajuda.fragmentos.HomeFragment;
 import com.e4u.autoajuda.fragmentos.NoticiasFragment;
 import com.e4u.autoajuda.fragmentos.VideoFragment;

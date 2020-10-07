@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -46,7 +46,7 @@
                 android:layout_below="@+id/imgPessoaMelhor"
                 android:layout_margin="@dimen/margin"
                 android:lineSpacingExtra="4dp"
-                android:text="@string/seja_uma_pessoa_melhor"
+                android:text="@string/seja_uma_pessoa_melhor_text"
                 android:textColor="@color/red1"
                 android:textSize="@dimen/normal_text" />
 
