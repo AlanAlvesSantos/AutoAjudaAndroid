@@ -49,7 +49,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/student"
+                        android:src="@drawable/imgmeditacao1"
                         android:transitionName="img" />
 
                     <ImageView
@@ -93,7 +93,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/motivation_img"
+                        android:src="@drawable/imgrespiracaoqueacalma1"
                         android:transitionName="img" />
 
                     <ImageView
@@ -137,7 +137,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/imgrelacionamento"
+                        android:src="@drawable/imgexerciciosdodia2"
                         android:transitionName="img" />
 
                     <ImageView

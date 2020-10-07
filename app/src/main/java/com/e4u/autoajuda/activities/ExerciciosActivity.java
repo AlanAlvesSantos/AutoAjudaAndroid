@@ -10,7 +10,10 @@ import com.e4u.autoajuda.R;
 public class ExerciciosActivity extends AppCompatActivity {
 
     CardView card1;
-    //criar variavel carview p card 2 e 3
+    CardView card2;
+    CardView card3;
+
+    //criar variavel Cardview p card 2 e 3
 
 
     @Override
@@ -20,12 +23,14 @@ public class ExerciciosActivity extends AppCompatActivity {
 
         linkarComponentsFromXML();
     }
-
+       // linkar card 2 e 3
     private void linkarComponentsFromXML(){
 
         card1 = findViewById(R.id.cardExercicio1);
+        card2 = findViewById(R.id.cardExercicio2);
+        card3 = findViewById(R.id.cardExercicio3);
 
-        // linkar card 2 e 3
+
     }
 
     private void clickCardViewEvents(){
@@ -35,8 +40,17 @@ public class ExerciciosActivity extends AppCompatActivity {
             //Call another activity
         });
 
-        // criar eventos p card2 e 3
+        card2.setOnClickListener(v -> {
 
+            //Call another activity
+        });
+
+        card3.setOnClickListener(v -> {
+
+            //Call another activity
+        });
+
+        // criar eventos p card2 e 3
 
     }
 }
