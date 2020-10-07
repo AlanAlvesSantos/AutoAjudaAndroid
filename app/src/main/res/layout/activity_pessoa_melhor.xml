@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="@string/Seja Uma Pessoa Melhor"
+                android:text="@string/seja_uma_pessoa_melhor_title"
                 android:textColor="@color/red1"
                 android:textSize="@dimen/title_text"
                 android:textStyle="bold" />
