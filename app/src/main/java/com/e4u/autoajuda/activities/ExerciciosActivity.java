@@ -3,8 +3,11 @@ package com.e4u.autoajuda.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.e4u.autoajuda.HomeActivity;
+import com.e4u.autoajuda.MainActivity;
 import com.e4u.autoajuda.R;
 
 public class ExerciciosActivity extends AppCompatActivity {
@@ -30,7 +33,7 @@ public class ExerciciosActivity extends AppCompatActivity {
         card2 = findViewById(R.id.cardExercicio2);
         card3 = findViewById(R.id.cardExercicio3);
 
-
+        clickCardViewEvents();
     }
 
     private void clickCardViewEvents(){
@@ -45,12 +48,12 @@ public class ExerciciosActivity extends AppCompatActivity {
             //Call another activity
         });
 
+        //Call daily exercise screen
         card3.setOnClickListener(v -> {
 
-            //Call another activity
+            Intent i = new Intent(ExerciciosActivity.this, ExercicioDoDiaActivity.class);
+            startActivity(i);
         });
-
-        // criar eventos p card2 e 3
 
     }
 }
