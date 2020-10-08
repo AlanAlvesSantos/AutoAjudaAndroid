@@ -13,16 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
+        <activity android:name=".activities.ExercicioDoDiaActivity"></activity>
         <activity android:name=".activities.RelacionamentoActivity" />
-
         <activity android:name=".activities.NewsReadActivity" />
-
         <activity
             android:name=".activities.VideoPlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:name=".HomeActivity" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".activities.MotivacionalActivity" />
         <activity android:name=".activities.AmizadeActivity" />
         <activity android:name=".activities.EstudosActivity" />
@@ -39,12 +35,9 @@
         <activity android:name=".activities.SaudeActivity" />
         <activity android:name=".activities.TrabalhoActivity" />
 
-
-
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9313963887713254~1958460680" />
-
     </application>
 
 </manifest>
