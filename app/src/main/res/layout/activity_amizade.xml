@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/margin"
     tools:context=".activities.AmizadeActivity">
 
     <ScrollView
@@ -14,7 +13,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -27,6 +26,7 @@
                 android:layout_centerHorizontal="true"
                 android:text="@string/amizades"
                 android:textColor="@color/red1"
+                android:layout_marginTop="@dimen/margin"
                 android:textSize="@dimen/title_text"
                 android:textStyle="bold" />
 

@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="24dp"
+                android:layout_marginTop="@dimen/margin"
                 android:gravity="center_horizontal"
                 android:text="@string/exercicios"
                 android:textColor="@color/red1"

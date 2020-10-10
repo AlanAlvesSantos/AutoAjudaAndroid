@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/margin"
     tools:context=".activities.PessoaMelhorActivity">
 
     <ScrollView
@@ -26,6 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="@string/seja_uma_pessoa_melhor_title"
+                android:layout_marginTop="@dimen/margin"
                 android:textColor="@color/red1"
                 android:textSize="@dimen/title_text"
                 android:textStyle="bold" />
