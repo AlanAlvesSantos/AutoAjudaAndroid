@@ -40,19 +40,21 @@ public class ExerciciosActivity extends AppCompatActivity {
 
         card1.setOnClickListener(v -> {
 
-            //Call another activity
+            Intent i = new Intent(ExerciciosActivity.this, MeditacaoExercicioActivity.class);
+            startActivity(i);
         });
 
         card2.setOnClickListener(v -> {
 
-            //Call another activity
+            Intent i2 = new Intent(ExerciciosActivity.this, TecnicasRespiracaoActivity.class);
+            startActivity(i2);
         });
 
         //Call daily exercise screen
         card3.setOnClickListener(v -> {
 
-            Intent i = new Intent(ExerciciosActivity.this, ExercicioDoDiaActivity.class);
-            startActivity(i);
+            Intent i3 = new Intent(ExerciciosActivity.this, ExercicioDoDiaActivity.class);
+            startActivity(i3);
         });
 
     }

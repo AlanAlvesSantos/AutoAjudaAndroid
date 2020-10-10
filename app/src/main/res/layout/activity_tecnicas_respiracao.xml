@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/image_height"
                 android:layout_below="@+id/txtTR1"
-                android:visibility="invisible"
+                android:visibility="gone"
                 android:layout_marginTop="@dimen/margin"
                 android:scaleType="fitXY"
                 android:src="@drawable/healthy" />
@@ -69,7 +69,7 @@
                 android:lineSpacingExtra="4dp"
                 android:text="@string/tr2"
                 android:textColor="@color/red1"
-                android:visibility="invisible"
+                android:visibility="gone"
                 android:textSize="@dimen/normal_text" />
 
 
