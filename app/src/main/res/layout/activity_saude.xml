@@ -6,4 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".activities.SaudeActivity">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtTituloSaude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/nossa_saude"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/title_text"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgSaude1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtTituloSaude"
+                android:layout_marginTop="@dimen/margin"
+                android:scaleType="fitXY"
+                android:src="@drawable/healthy_one" />
+
+            <TextView
+                android:id="@+id/txtSaude1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgSaude1"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/texto_saude_1"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+            <ImageView
+                android:id="@+id/imgSaude2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtSaude1"
+                android:layout_marginTop="@dimen/margin"
+                android:scaleType="fitXY"
+                android:src="@drawable/healthy" />
+
+            <TextView
+                android:id="@+id/txtSaude2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgSaude2"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/texto_saude_2"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

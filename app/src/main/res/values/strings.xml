@@ -31,5 +31,8 @@
     <string name="meditacao">Meditação</string>
     <string name="respira_o_que_acalma">Respiração que acalma</string>
     <string name="exercic_o_do_dia">Exercicío do dia</string>
+    <string name="nossa_saude">Nossa saúde</string>
+    <string name="texto_saude_1"><b></b>\n\n</string>
+    <string name="texto_saude_2">Texto saude 2</string>
 
 </resources>
