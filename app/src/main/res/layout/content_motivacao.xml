@@ -60,8 +60,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:gravity="center_horizontal"
-                android:textSize="@dimen/_18ssp"
+                android:textSize="@dimen/_16ssp"
                 android:layout_marginTop="@dimen/_12sdp"
+                android:textColor="@color/colorPrimary"
                 android:layout_below="@+id/rvVideosMeditacao"
                 android:text="@string/t_cnicas_de_medita_o" />
 
