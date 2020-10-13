@@ -13,30 +13,57 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/txtTituloVideo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="24dp"
-                android:textStyle="bold"
-                android:gravity="center_horizontal"
-                android:text="@string/v_deos_para_medita_o"
-                android:textColor="@color/red1"
-                android:textSize="20sp" />
+            <RelativeLayout
+                android:id="@+id/rlImgTitle"
+                android:layout_width="match_parent"
+                android:background="#000"
+                android:paddingBottom="@dimen/_6sdp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgMeditacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_height"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/imgmeditacao2" />
+
+                <TextView
+                    android:id="@+id/txtTituloVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/v_deos_para_medita_o"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvVideosMeditacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtTituloVideo"
-                android:layout_marginTop="16dp"
+                android:layout_below="@+id/rlImgTitle"
+                android:layout_margin="@dimen/_12sdp"
                 android:clipToPadding="false"
                 android:scrollbars="vertical" />
+
+            <TextView
+                android:id="@+id/txtTecnicasMeditacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/_18ssp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_below="@+id/rvVideosMeditacao"
+                android:text="@string/t_cnicas_de_medita_o" />
 
         </RelativeLayout>
 
