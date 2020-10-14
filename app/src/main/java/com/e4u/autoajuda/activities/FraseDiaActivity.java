@@ -2,8 +2,12 @@ package com.e4u.autoajuda.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.e4u.autoajuda.R;
@@ -15,6 +19,8 @@ import java.util.List;
 public class FraseDiaActivity extends AppCompatActivity {
 
     TextView txtFrase;
+    LinearLayout llCompartilhar;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +30,27 @@ public class FraseDiaActivity extends AppCompatActivity {
         //Criar o vinculo entre as variaveis e os objetos do XML
         txtFrase = findViewById(R.id.txtFrase);
 
+        llCompartilhar = findViewById(R.id.llCompartilhar);
+
+        llCompartilhar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                compartilharFrase();
+            }
+        });
+
         carregarFrases();
+    }
+
+    private void compartilharFrase(){
+
+        Intent shareIntent = new Intent(android.content.Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Frase do dia do Aplicativo Auto Ajuda");
+        String shareMessage = txtFrase.getText().toString();
+        shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareMessage);
+        startActivity(Intent.createChooser(shareIntent, "Compartilhe a Frase do dia"));
     }
 
     private void carregarFrases(){
@@ -458,7 +484,9 @@ public class FraseDiaActivity extends AppCompatActivity {
 
         //listaFrases.add("“”");
 
-        int selected = Calendar.DAY_OF_YEAR;
-        txtFrase.setText(listaFrases.get(selected));
+        Calendar calendar = Calendar.getInstance();
+        int selected = calendar.get(Calendar.DAY_OF_YEAR);
+        String frase = listaFrases.get(selected);
+        txtFrase.setText(frase);
     }
 }

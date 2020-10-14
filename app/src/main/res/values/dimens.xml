@@ -4,6 +4,7 @@
     <dimen name="title_text">@dimen/_13ssp</dimen>
     <dimen name="splash_text_size">@dimen/_14ssp</dimen>
     <dimen name="normal_text">@dimen/_12ssp</dimen>
+    <dimen name="frase_text">@dimen/_18ssp</dimen>
 
     <dimen name="margin">@dimen/_12sdp</dimen>
     <dimen name="splash_image_size">@dimen/_124sdp</dimen>

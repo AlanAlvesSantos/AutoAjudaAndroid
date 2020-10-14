@@ -43,14 +43,44 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imgFrase"
-                android:layout_margin="@dimen/margin"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_36sdp"
                 android:lineSpacingExtra="4dp"
                 android:textColor="@color/red1"
+                android:text="rrrrrrrr"
                 android:layout_centerHorizontal="true"
                 android:gravity="center_horizontal"
                 android:layout_centerVertical="true"
-                android:textSize="@dimen/normal_text" />
+                android:textSize="@dimen/frase_text" />
 
+
+            <LinearLayout
+                android:id="@+id/llCompartilhar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtFrase"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgFrases"
+                    android:layout_width="@dimen/_64sdp"
+                    android:layout_height="@dimen/_64sdp"
+                    android:src="@drawable/ic_compartilhar" />
+
+                <TextView
+                    android:id="@+id/txtFrases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="@string/compartilhe_essa_frase_com_seus_amigos_e_familiares"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
 
         </RelativeLayout>
 
