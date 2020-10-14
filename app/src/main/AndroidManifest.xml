@@ -7,13 +7,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/logo_butterflu"
+        android:icon="@drawable/borboleta"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo"
+        android:roundIcon="@drawable/borboleta"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.TecnicasMeditacaoActivity"></activity>
+        <activity android:name=".activities.FraseDiaActivity"></activity>
+        <activity android:name=".activities.TecnicasMeditacaoActivity" />
         <activity android:name=".activities.MeditacaoExercicioActivity" />
         <activity android:name=".activities.TecnicasRespiracaoActivity" />
         <activity android:name=".activities.ExercicioDoDiaActivity" />

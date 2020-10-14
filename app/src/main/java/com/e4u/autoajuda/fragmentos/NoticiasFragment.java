@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.e4u.autoajuda.R;
 import com.e4u.autoajuda.Utilities;
@@ -51,6 +52,7 @@ public class NoticiasFragment extends Fragment {
     NewsAdapter adapter;
     String parsedString = "";
     public int indice = 1;
+    TextView txtTituloNoticias;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -90,7 +92,8 @@ public class NoticiasFragment extends Fragment {
 
     private void initComponents(View v) {
 
-        rvNoticias = v.findViewById(R.id.rvNoticias);
+        rvNoticias = v.findViewById(R.id.rvNoticiasBoas);
+        txtTituloNoticias = v.findViewById(R.id.txtTitulo);
         getNewsFromServer();
     }
 
