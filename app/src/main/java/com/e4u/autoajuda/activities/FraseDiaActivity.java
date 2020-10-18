@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,6 +23,7 @@ public class FraseDiaActivity extends AppCompatActivity {
     TextView txtFrase;
     LinearLayout llCompartilhar;
     Context context;
+    ImageView imgFrase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,17 @@ public class FraseDiaActivity extends AppCompatActivity {
         txtFrase = findViewById(R.id.txtFrase);
 
         llCompartilhar = findViewById(R.id.llCompartilhar);
+
+        imgFrase = findViewById(R.id.imgFrase);
+
+        Animation anim1 = AnimationUtils.loadAnimation(this, R.anim.image_fade_animation);
+        imgFrase.setAnimation(anim1);
+
+        Animation anim2 = AnimationUtils.loadAnimation(this, R.anim.image_fade_animation_2);
+        txtFrase.setAnimation(anim2);
+
+        Animation anim3 = AnimationUtils.loadAnimation(this, R.anim.image_fade_animation_3);
+        llCompartilhar.setAnimation(anim3);
 
         llCompartilhar.setOnClickListener(new View.OnClickListener() {
             @Override
