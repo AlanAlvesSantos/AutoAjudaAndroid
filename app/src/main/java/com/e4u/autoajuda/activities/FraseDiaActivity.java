@@ -475,7 +475,7 @@ public class FraseDiaActivity extends AppCompatActivity {
         listaFrases.add("“Tudo o que você pode imaginar é real.” - Pablo Picasso");
         listaFrases.add("“Quando uma porta de felicidade se fecha, outra se abre; mas muitas vezes olhamos tanto para a porta fechada que não vemos aquela que se abriu para nós.”");
         listaFrases.add("“Faça todos os dias uma coisa que te assuste.”");
-        
+
         Calendar calendar = Calendar.getInstance();
         int selected = calendar.get(Calendar.DAY_OF_YEAR);
         String frase = listaFrases.get(selected);
