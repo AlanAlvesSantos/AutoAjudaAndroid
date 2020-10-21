@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.e4u.autoajuda"
-        minSdkVersion 19
+        minSdkVersion 18
         targetSdkVersion 29
         versionCode 2
         versionName "2.0"

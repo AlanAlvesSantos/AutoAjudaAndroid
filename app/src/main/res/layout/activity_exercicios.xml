@@ -24,7 +24,7 @@
                 android:gravity="center_horizontal"
                 android:text="@string/exercicios"
                 android:textColor="@color/red1"
-                android:textSize="20sp"
+                android:textSize="@dimen/title_text"
                 android:textStyle="bold" />
 
 

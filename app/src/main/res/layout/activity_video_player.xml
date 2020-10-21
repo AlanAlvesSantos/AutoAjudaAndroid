@@ -16,7 +16,7 @@
         android:paddingEnd="32dp"
         android:gravity="center_horizontal"
         android:textColor="@color/red1"
-        android:textSize="20sp"
+        android:textSize="@dimen/title_text"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
