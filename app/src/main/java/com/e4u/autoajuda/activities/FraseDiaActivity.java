@@ -368,6 +368,28 @@ public class FraseDiaActivity extends AppCompatActivity {
         listaFrases.add("“Um homem de verdade não se faz só com palavras”");
         listaFrases.add("“Um homem de verdade não se faz só com palavras”");
         listaFrases.add("“Sempre terá alguma dor em você, mais nunca desista. Você quer, você pode, e só superar”");
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
