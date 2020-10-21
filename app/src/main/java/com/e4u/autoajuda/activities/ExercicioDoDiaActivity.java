@@ -29,6 +29,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 
+import static com.e4u.autoajuda.MainActivity.mInterstitialAd;
+
 
 public class ExercicioDoDiaActivity extends AppCompatActivity {
 
@@ -49,6 +51,13 @@ public class ExercicioDoDiaActivity extends AppCompatActivity {
         txtTitulo = findViewById(R.id.txtTitulo);
         txtDescricaoDoExercicio = findViewById(R.id.txtDescricaoDoExercicio);
         getData();
+
+        try {
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            }
+        } catch (Exception ex) {
+        }
     }
 
     private void getData() {

@@ -18,6 +18,8 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.e4u.autoajuda.R;
 
+import static com.e4u.autoajuda.MainActivity.mInterstitialAd;
+
 public class NewsReadActivity extends AppCompatActivity {
 
     TextView txtTitle, txtDesc, txtSubTitle;
@@ -61,5 +63,13 @@ public class NewsReadActivity extends AppCompatActivity {
                 })
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .into(imgNews);
+
+
+        try {
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            }
+        } catch (Exception ex) {
+        }
     }
 }
