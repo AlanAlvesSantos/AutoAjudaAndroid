@@ -165,7 +165,6 @@ public class ExercicioDoDiaActivity extends AppCompatActivity {
 
             Glide.with(activity)
                     .load(exercicio.getImage())
-                    .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .centerCrop()
                     .into(imgexerciciododia);
 
