@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.FraseDiaActivity"></activity>
+        <activity android:name=".activities.ReconhecerSeuValorActivity"></activity>
+        <activity android:name=".activities.FraseDiaActivity" />
         <activity android:name=".activities.TecnicasMeditacaoActivity" />
         <activity android:name=".activities.MeditacaoExercicioActivity" />
         <activity android:name=".activities.TecnicasRespiracaoActivity" />

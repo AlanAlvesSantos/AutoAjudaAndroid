@@ -160,6 +160,50 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardExercicio4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardExercicio2"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/img4"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/imgrespiracaoqueacalma1"
+                        android:transitionName="img" />
+
+                    <ImageView
+                        android:id="@+id/shadow_bottom4"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_alignBottom="@+id/img4"
+                        android:src="@drawable/bottom_shadow" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="150dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/reconhe_a_seus_valores"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
 
         </RelativeLayout>
 

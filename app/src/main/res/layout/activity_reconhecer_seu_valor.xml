@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ReconhecerSeuValorActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtTituloReconhecimento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/reconhe_a_seus_valores"
+                android:layout_marginTop="@dimen/margin"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/title_text"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgReconhecimentoIntro"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtTituloReconhecimento"
+                android:layout_marginTop="23dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/imgpessoamelhor" />
+
+            <TextView
+                android:id="@+id/txtExercicioIntro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgReconhecimentoIntro"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/reconhecimento_intro"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+
+
+            <ImageView
+                android:id="@+id/imgReconhecimento1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtExercicioIntro"
+                android:layout_marginTop="23dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/imgpessoamelhor" />
+
+            <TextView
+                android:id="@+id/txtExercicio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgReconhecimento1"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/reconhecimento_text_1"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+
+
+
+            <ImageView
+                android:id="@+id/imgReconhecimento2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtExercicio1"
+                android:layout_marginTop="23dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/imgpessoamelhor" />
+
+            <TextView
+                android:id="@+id/txtExercicio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgReconhecimento2"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/reconhecimento_text_2"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+
+
+
+            <ImageView
+                android:id="@+id/imgReconhecimento3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtExercicio2"
+                android:layout_marginTop="23dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/imgpessoamelhor" />
+
+            <TextView
+                android:id="@+id/txtExercicio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgReconhecimento3"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/reconhecimento_text_3"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+
+
+
+
+            <ImageView
+                android:id="@+id/imgReconhecimento4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtExercicio3"
+                android:layout_marginTop="23dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/imgpessoamelhor" />
+
+            <TextView
+                android:id="@+id/txtExercicio4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgReconhecimento4"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/reconhecimento_text_4"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+
+
+
+
+            <ImageView
+                android:id="@+id/imgReconhecimento5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtExercicio4"
+                android:layout_marginTop="23dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/imgpessoamelhor" />
+
+            <TextView
+                android:id="@+id/txtExercicio5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgReconhecimento5"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/reconhecimento_text_5"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+
+
+
+            <ImageView
+                android:id="@+id/imgReconhecimento6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtExercicio5"
+                android:layout_marginTop="23dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/imgpessoamelhor" />
+
+            <TextView
+                android:id="@+id/txtExercicio6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgReconhecimento6"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/reconhecimento_text_6"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+
+
+
+            <ImageView
+                android:id="@+id/imgReconhecimento7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_below="@+id/txtExercicio6"
+                android:layout_marginTop="23dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/imgpessoamelhor" />
+
+            <TextView
+                android:id="@+id/txtExercicio7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgReconhecimento7"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/reconhecimento_text_7"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

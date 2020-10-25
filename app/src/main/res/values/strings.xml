@@ -44,4 +44,13 @@
     <string name="compartilhe_essa_frase_com_seus_amigos_e_familiares">Compartilhe essa frase \ncom seus familiares e amigos</string>
 
     <string name="ad_inter_key_prod">ca-app-pub-9313963887713254/4838127664</string>
+    <string name="reconhe_a_seus_valores">Reconheça os seus valores</string>
+    <string name="reconhecimento_intro">Os seguintes exercícios irão te ajudar a ver mais coisas positivas em você mesmo e em sua vida. Eles te ajudarão a crescer sua autoestima rapidamente e que você pode sim apreciar e se orgulhar dos bons elementos que tem em sua vida.</string>
+    <string name="reconhecimento_text_1">reconhecimento exercicio 1</string>
+    <string name="reconhecimento_text_2">Recomnhecimento text 2</string>
+    <string name="reconhecimento_text_3">Reconhecimento text 3</string>
+    <string name="reconhecimento_text_4">reconhecimento text 4</string>
+    <string name="reconhecimento_text_5">reconhecimento text 5</string>
+    <string name="reconhecimento_text_6">reconhecimento text 6</string>
+    <string name="reconhecimento_text_7">reconhecimento text 7</string>
 </resources>
