@@ -37,7 +37,7 @@
                 android:layout_below="@+id/txtTituloReconhecimento"
                 android:layout_marginTop="23dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgpessoamelhor" />
+                android:src="@drawable/imgreconhervalores" />
 
             <TextView
                 android:id="@+id/txtExercicioIntro"
@@ -59,7 +59,7 @@
                 android:layout_below="@+id/txtExercicioIntro"
                 android:layout_marginTop="23dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgpessoamelhor" />
+                android:src="@drawable/imgreconhecimentoexecicio1" />
 
             <TextView
                 android:id="@+id/txtExercicio1"
@@ -82,7 +82,7 @@
                 android:layout_below="@+id/txtExercicio1"
                 android:layout_marginTop="23dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgpessoamelhor" />
+                android:src="@drawable/imgreconhecimentoexercicio2" />
 
             <TextView
                 android:id="@+id/txtExercicio2"
@@ -105,7 +105,7 @@
                 android:layout_below="@+id/txtExercicio2"
                 android:layout_marginTop="23dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgpessoamelhor" />
+                android:src="@drawable/imgreconhecimentoexercicio3" />
 
             <TextView
                 android:id="@+id/txtExercicio3"
@@ -129,7 +129,7 @@
                 android:layout_below="@+id/txtExercicio3"
                 android:layout_marginTop="23dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgpessoamelhor" />
+                android:src="@drawable/imgreconhecimentoexercicio4" />
 
             <TextView
                 android:id="@+id/txtExercicio4"
@@ -153,7 +153,7 @@
                 android:layout_below="@+id/txtExercicio4"
                 android:layout_marginTop="23dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgpessoamelhor" />
+                android:src="@drawable/imgreconhecimentoexercicio5" />
 
             <TextView
                 android:id="@+id/txtExercicio5"
@@ -176,7 +176,7 @@
                 android:layout_below="@+id/txtExercicio5"
                 android:layout_marginTop="23dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgpessoamelhor" />
+                android:src="@drawable/imgreconhecimentoexercicio6" />
 
             <TextView
                 android:id="@+id/txtExercicio6"
@@ -199,7 +199,7 @@
                 android:layout_below="@+id/txtExercicio6"
                 android:layout_marginTop="23dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgpessoamelhor" />
+                android:src="@drawable/imgreconhecimentoexercicio7" />
 
             <TextView
                 android:id="@+id/txtExercicio7"
