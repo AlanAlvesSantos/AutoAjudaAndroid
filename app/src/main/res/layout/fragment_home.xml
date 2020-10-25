@@ -87,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/llMotivacao"
                 android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
                 android:layout_marginBottom="48dp"
                 android:layout_marginEnd="24dp"
                 android:gravity="center_horizontal"
@@ -109,14 +110,13 @@
             </LinearLayout>
 
 
-
             <!-- LINHA 3 -->
 
             <LinearLayout
                 android:id="@+id/llTrabalho"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/llAmizade"
+                android:layout_below="@+id/llExercicios"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="24dp"
                 android:gravity="center_horizontal"
@@ -226,6 +226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/llRelacionamento"
+                android:layout_marginTop="24dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginBottom="48dp"
                 android:gravity="center_horizontal"
