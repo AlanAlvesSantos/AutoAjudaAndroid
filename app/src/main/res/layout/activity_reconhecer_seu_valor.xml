@@ -212,6 +212,17 @@
                 android:textColor="@color/red1"
                 android:textSize="@dimen/normal_text" />
 
+            <TextView
+                android:id="@+id/txtConclusao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtExercicio7"
+                android:layout_margin="@dimen/margin"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/conclusao_do_exercicio"
+                android:textColor="@color/red1"
+                android:textSize="@dimen/normal_text" />
+
         </RelativeLayout>
     </ScrollView>
 
