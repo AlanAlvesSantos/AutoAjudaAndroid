@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentManager;
 import com.e4u.autoajuda.fragmentos.HomeFragment;
 import com.e4u.autoajuda.fragmentos.NoticiasFragment;
 import com.e4u.autoajuda.fragmentos.VideoFragment;
+import com.e4u.autoajuda.work.WorkRepo;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity {
@@ -32,6 +33,9 @@ public class HomeActivity extends AppCompatActivity {
         fm.beginTransaction().add(R.id.main_container, videoFragment, "2").hide(videoFragment).commit();
         fm.beginTransaction().add(R.id.main_container, homeFragment, "1").commit();
         active = homeFragment;
+
+        WorkRepo workRepo = new WorkRepo();
+        workRepo.startWorkNotifications();
     }
 
     private void clickMenu() {
