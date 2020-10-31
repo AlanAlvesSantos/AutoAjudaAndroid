@@ -10,6 +10,9 @@ import com.e4u.autoajuda.HomeActivity;
 import com.e4u.autoajuda.MainActivity;
 import com.e4u.autoajuda.R;
 
+import static com.e4u.autoajuda.HomeActivity.NOTIFICATION;
+import static com.e4u.autoajuda.HomeActivity.NOTIFICATION_NOITE;
+
 public class ExerciciosActivity extends AppCompatActivity {
 
     CardView card1;
@@ -26,6 +29,16 @@ public class ExerciciosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exercicios);
 
         linkarComponentsFromXML();
+
+        if(NOTIFICATION == true){
+            Intent i3 = new Intent(ExerciciosActivity.this, ExercicioDoDiaActivity.class);
+            startActivity(i3);
+        }
+
+        if(NOTIFICATION_NOITE == true){
+            Intent i3 = new Intent(ExerciciosActivity.this, MeditacaoExercicioActivity.class);
+            startActivity(i3);
+        }
     }
        // linkar card 2 e 3
     private void linkarComponentsFromXML(){

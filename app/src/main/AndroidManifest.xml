@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
@@ -14,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.ReconhecerSeuValorActivity"></activity>
+
+        <activity android:name=".activities.ReconhecerSeuValorActivity" />
         <activity android:name=".activities.FraseDiaActivity" />
         <activity android:name=".activities.TecnicasMeditacaoActivity" />
         <activity android:name=".activities.MeditacaoExercicioActivity" />
@@ -45,12 +48,16 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9313963887713254~9104853343" />
 
-        <receiver android:name=".work.WorkManagerStartReceiver" >
+        <receiver android:name=".work.WorkManagerStartReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
             </intent-filter>
         </receiver>
+
+        <service
+            android:name=".work.WorkService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
     </application>
 
 </manifest>

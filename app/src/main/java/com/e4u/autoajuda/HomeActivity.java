@@ -1,5 +1,7 @@
 package com.e4u.autoajuda;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -11,6 +13,8 @@ import androidx.work.ExistingPeriodicWorkPolicy;
 import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
+import com.e4u.autoajuda.activities.ExerciciosActivity;
+import com.e4u.autoajuda.activities.FraseDiaActivity;
 import com.e4u.autoajuda.fragmentos.HomeFragment;
 import com.e4u.autoajuda.fragmentos.NoticiasFragment;
 import com.e4u.autoajuda.fragmentos.VideoFragment;
@@ -25,14 +29,19 @@ public class HomeActivity extends AppCompatActivity {
     Fragment videoFragment = new VideoFragment();
     Fragment noticiasFragment = new NoticiasFragment();
     Fragment homeFragment = new HomeFragment();
+    public static boolean NOTIFICATION = false;
+    public static boolean NOTIFICATION_NOITE = false;
 
     FragmentManager fm = getSupportFragmentManager();
     Fragment active = homeFragment;
+    Context ctx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        ctx = this;
 
         clickMenu();
         fm.beginTransaction().add(R.id.main_container, noticiasFragment, "3").hide(noticiasFragment).commit();
@@ -42,13 +51,51 @@ public class HomeActivity extends AppCompatActivity {
 
         PeriodicWorkRequest.Builder myWorkBuilder =
                 new PeriodicWorkRequest.Builder(WorkNotifications.class,
-                        PeriodicWorkRequest.MIN_PERIODIC_INTERVAL_MILLIS,
-                        TimeUnit.MILLISECONDS);
+                        6, TimeUnit.HOURS, 60, TimeUnit.MINUTES);
 
         PeriodicWorkRequest myWork = myWorkBuilder.build();
 
         WorkManager.getInstance(HomeActivity.this)
                 .enqueueUniquePeriodicWork("workNotifications", ExistingPeriodicWorkPolicy.KEEP, myWork);
+
+        //Notification
+
+        if (getIntent().hasExtra("notification")) {
+
+            try {
+
+                NOTIFICATION = true;
+
+                Intent intentMeta = new Intent(ctx, ExerciciosActivity.class);
+                startActivity(intentMeta);
+            } catch (Exception e) {
+
+            }
+        }
+
+        if (getIntent().hasExtra("notificationTarde")) {
+
+            try {
+
+                Intent intent = new Intent(ctx, FraseDiaActivity.class);
+                startActivity(intent);
+            } catch (Exception e) {
+
+            }
+        }
+
+        if (getIntent().hasExtra("notificationNoite")) {
+
+            try {
+
+                NOTIFICATION_NOITE = true;
+
+                Intent intentMeta = new Intent(ctx, ExerciciosActivity.class);
+                startActivity(intentMeta);
+            } catch (Exception e) {
+
+            }
+        }
     }
 
     private void clickMenu() {

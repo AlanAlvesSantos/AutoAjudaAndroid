@@ -15,6 +15,9 @@ import androidx.work.WorkerParameters;
 import com.e4u.autoajuda.HomeActivity;
 import com.e4u.autoajuda.R;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class WorkNotifications extends Worker {
 
     private final String CHANNEL_ID = "personal_channel";
@@ -31,21 +34,31 @@ public class WorkNotifications extends Worker {
     @Override
     public ListenableWorker.Result doWork() {
 
-        showNotification();
+        Calendar calendar = Calendar.getInstance();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+
+        if(hour < 11){
+            showNotificationMorning();
+        } else if(hour >= 11 && hour < 18){
+            showNotificationAfterNoon();
+        }else if(hour >= 18){
+            showNotificationForNight();
+        }
+
         return ListenableWorker.Result.success();
     }
 
-    void showNotification() {
+    void showNotificationMorning() {
 
         String title = "Exercício do dia";
-        String message = "Pratique o exercício do dia. Todo dia uma novidade para você!";
+        String message = "Pratique o exercício do dia. Todo dia uma novidade para você.";
         NotificationManager mNotificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID,
-                    "Novo",
+                    "Exercício",
                     NotificationManager.IMPORTANCE_DEFAULT);
-            channel.setDescription("Novo vídeo");
+            channel.setDescription("Novo Exercício");
             mNotificationManager.createNotificationChannel(channel);
         }
 
@@ -58,6 +71,64 @@ public class WorkNotifications extends Worker {
 
         Intent intentLista = new Intent(getApplicationContext(), HomeActivity.class);
         intentLista.putExtra("notification", "YES");
+        PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intentLista, PendingIntent.FLAG_UPDATE_CURRENT);
+        mBuilder.setContentIntent(pi);
+        mNotificationManager.notify(0, mBuilder.build());
+    }
+
+
+    void showNotificationAfterNoon() {
+
+        String title = "Frase do dia";
+        String message = "Leia a frase motivacional do dia e compartilhe.";
+        NotificationManager mNotificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID,
+                    "Frase",
+                    NotificationManager.IMPORTANCE_DEFAULT);
+            channel.setDescription("Frase do dia");
+            mNotificationManager.createNotificationChannel(channel);
+        }
+
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
+                .setSmallIcon(R.drawable.logo)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setAutoCancel(true);
+
+        Intent intentLista = new Intent(getApplicationContext(), HomeActivity.class);
+        intentLista.putExtra("notificationTarde", "YES");
+        PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intentLista, PendingIntent.FLAG_UPDATE_CURRENT);
+        mBuilder.setContentIntent(pi);
+        mNotificationManager.notify(0, mBuilder.build());
+    }
+
+
+    void showNotificationForNight() {
+
+        String title = "Que tal meditar um pouco?";
+        String message = "Clique aqui e faça uma meditação relaxante";
+        NotificationManager mNotificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID,
+                    "Meditação",
+                    NotificationManager.IMPORTANCE_DEFAULT);
+            channel.setDescription("Meditação");
+            mNotificationManager.createNotificationChannel(channel);
+        }
+
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
+                .setSmallIcon(R.drawable.logo)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setAutoCancel(true);
+
+        Intent intentLista = new Intent(getApplicationContext(), HomeActivity.class);
+        intentLista.putExtra("notificationNoite", "YES");
         PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intentLista, PendingIntent.FLAG_UPDATE_CURRENT);
         mBuilder.setContentIntent(pi);
         mNotificationManager.notify(0, mBuilder.build());
