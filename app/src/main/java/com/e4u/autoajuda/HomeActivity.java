@@ -7,12 +7,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.work.ExistingPeriodicWorkPolicy;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
 
 import com.e4u.autoajuda.fragmentos.HomeFragment;
 import com.e4u.autoajuda.fragmentos.NoticiasFragment;
 import com.e4u.autoajuda.fragmentos.VideoFragment;
+import com.e4u.autoajuda.work.WorkNotifications;
 import com.e4u.autoajuda.work.WorkRepo;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.concurrent.TimeUnit;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -34,8 +40,15 @@ public class HomeActivity extends AppCompatActivity {
         fm.beginTransaction().add(R.id.main_container, homeFragment, "1").commit();
         active = homeFragment;
 
-        WorkRepo workRepo = new WorkRepo();
-        workRepo.startWorkNotifications();
+        PeriodicWorkRequest.Builder myWorkBuilder =
+                new PeriodicWorkRequest.Builder(WorkNotifications.class,
+                        PeriodicWorkRequest.MIN_PERIODIC_INTERVAL_MILLIS,
+                        TimeUnit.MILLISECONDS);
+
+        PeriodicWorkRequest myWork = myWorkBuilder.build();
+
+        WorkManager.getInstance(HomeActivity.this)
+                .enqueueUniquePeriodicWork("workNotifications", ExistingPeriodicWorkPolicy.KEEP, myWork);
     }
 
     private void clickMenu() {
