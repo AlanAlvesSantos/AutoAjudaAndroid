@@ -8,7 +8,10 @@ import android.content.Intent;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
+import androidx.work.ExistingPeriodicWorkPolicy;
 import androidx.work.ListenableWorker;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
@@ -17,17 +20,30 @@ import com.e4u.autoajuda.R;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class WorkNotifications extends Worker {
 
     private final String CHANNEL_ID = "personal_channel";
-    private final int NOTIFICATION_ID = 001;
+    private static final String uniqueWorkName = "com.e4u.autoajuda.work.WorkNotifications";
+    private static final long repeatIntervalMin = 6;
+    private static final long flexIntervalMin = 1;
 
     public WorkNotifications(
             @NonNull Context context,
             @NonNull WorkerParameters params) {
 
         super(context, params);
+    }
+
+    private static PeriodicWorkRequest getOwnWorkRequest() {
+        return new PeriodicWorkRequest.Builder(
+                WorkNotifications.class, repeatIntervalMin, TimeUnit.HOURS, flexIntervalMin, TimeUnit.HOURS
+        ).build();
+    }
+
+    public static void enqueueSelf() {
+        WorkManager.getInstance().enqueueUniquePeriodicWork(uniqueWorkName, ExistingPeriodicWorkPolicy.KEEP, getOwnWorkRequest());
     }
 
     @NonNull
@@ -37,11 +53,11 @@ public class WorkNotifications extends Worker {
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
 
-        if(hour < 11){
+        if (hour < 11) {
             showNotificationMorning();
-        } else if(hour >= 11 && hour < 18){
+        } else if (hour >= 11 && hour < 18) {
             showNotificationAfterNoon();
-        }else if(hour >= 18){
+        } else if (hour >= 18) {
             showNotificationForNight();
         }
 
@@ -103,6 +119,7 @@ public class WorkNotifications extends Worker {
         PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intentLista, PendingIntent.FLAG_UPDATE_CURRENT);
         mBuilder.setContentIntent(pi);
         mNotificationManager.notify(0, mBuilder.build());
+
     }
 
 

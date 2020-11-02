@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.e4u.autoajuda.R;
 import com.e4u.autoajuda.Utilities;
 import com.e4u.autoajuda.modelos.NewsModelo;
@@ -30,6 +29,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 import static com.e4u.autoajuda.MainActivity.mInterstitialAd;
+import static com.e4u.autoajuda.HomeActivity.NOTIFICATION;
 
 
 public class ExercicioDoDiaActivity extends AppCompatActivity {
@@ -46,6 +46,7 @@ public class ExercicioDoDiaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exercicio_do_dia);
 
         activity = this;
+        NOTIFICATION = false;
 
         imgexerciciododia = findViewById(R.id.imgexerciciododia);
         txtTitulo = findViewById(R.id.txtTitulo);

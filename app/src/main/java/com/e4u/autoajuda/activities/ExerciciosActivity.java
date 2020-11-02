@@ -5,9 +5,6 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.e4u.autoajuda.HomeActivity;
-import com.e4u.autoajuda.MainActivity;
 import com.e4u.autoajuda.R;
 
 import static com.e4u.autoajuda.HomeActivity.NOTIFICATION;

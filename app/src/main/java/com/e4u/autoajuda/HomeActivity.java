@@ -3,15 +3,14 @@ package com.e4u.autoajuda;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.work.ExistingPeriodicWorkPolicy;
-import androidx.work.PeriodicWorkRequest;
-import androidx.work.WorkManager;
 
 import com.e4u.autoajuda.activities.ExerciciosActivity;
 import com.e4u.autoajuda.activities.FraseDiaActivity;
@@ -19,10 +18,7 @@ import com.e4u.autoajuda.fragmentos.HomeFragment;
 import com.e4u.autoajuda.fragmentos.NoticiasFragment;
 import com.e4u.autoajuda.fragmentos.VideoFragment;
 import com.e4u.autoajuda.work.WorkNotifications;
-import com.e4u.autoajuda.work.WorkRepo;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.concurrent.TimeUnit;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -40,7 +36,6 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         ctx = this;
 
         clickMenu();
@@ -49,19 +44,8 @@ public class HomeActivity extends AppCompatActivity {
         fm.beginTransaction().add(R.id.main_container, homeFragment, "1").commit();
         active = homeFragment;
 
-        PeriodicWorkRequest.Builder myWorkBuilder =
-                new PeriodicWorkRequest.Builder(WorkNotifications.class,
-                        6, TimeUnit.HOURS, 60, TimeUnit.MINUTES);
-
-        PeriodicWorkRequest myWork = myWorkBuilder.build();
-
-        WorkManager.getInstance(HomeActivity.this)
-                .enqueueUniquePeriodicWork("workNotifications", ExistingPeriodicWorkPolicy.KEEP, myWork);
-
-        //Notification
-
+        //Notification:
         if (getIntent().hasExtra("notification")) {
-
             try {
 
                 NOTIFICATION = true;

@@ -6,26 +6,12 @@ import android.content.Intent;
 
 public class WorkManagerStartReceiver extends BroadcastReceiver {
 
-
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
-            Intent mIntent = new Intent(context, WorkService.class);
-            WorkService.enqueueWork(context, mIntent);
-        }
+        if (intent.getAction() == null || !intent.getAction().equals("android.intent.action.BOOT_COMPLETED"))
+            return;
 
-        /*
-        WorkManager mWorkManager;
-        PeriodicWorkRequest.Builder myWorkBuilder =
-                new PeriodicWorkRequest.Builder(WorkNotifications.class,
-                        15,
-                        TimeUnit.MINUTES,
-                        15,
-                        TimeUnit.MINUTES);
-
-        PeriodicWorkRequest myWork = myWorkBuilder.build();
-        mWorkManager = WorkManager.getInstance(context);
-        mWorkManager.enqueue(myWork); */
+        WorkNotifications.enqueueSelf();
     }
 }

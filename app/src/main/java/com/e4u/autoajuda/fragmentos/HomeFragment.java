@@ -1,6 +1,9 @@
 package com.e4u.autoajuda.fragmentos;
 
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -37,6 +40,7 @@ public class HomeFragment extends Fragment {
     LinearLayout llExercicios;
     LinearLayout llSaude;
     LinearLayout llFrases;
+    LinearLayout llAvaliar;
 
     private String mParam1;
     private String mParam2;
@@ -67,12 +71,12 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v =  inflater.inflate(R.layout.fragment_home, container, false);
+        View v = inflater.inflate(R.layout.fragment_home, container, false);
         initComponent(v);
         return v;
     }
 
-    private void initComponent(View view){
+    private void initComponent(View view) {
 
         llRelacionamento = view.findViewById(R.id.llRelacionamento);
         llRelacionamento.setOnClickListener(new View.OnClickListener() {
@@ -163,5 +167,30 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        llAvaliar = view.findViewById(R.id.llAvaliar);
+        llAvaliar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ratingApp();
+            }
+        });
+    }
+
+    private void ratingApp() {
+
+        String PACKAGE_NAME = "com.e4u.autoajuda";
+
+        Uri uri = Uri.parse("market://details?id=" + PACKAGE_NAME);
+        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+        goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_DOCUMENT | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+
+        try {
+            getContext().startActivity(goToMarket);
+        } catch (ActivityNotFoundException e) {
+            getContext().startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://play.google.com/store/apps/details?id="+PACKAGE_NAME)));
+        }
     }
 }

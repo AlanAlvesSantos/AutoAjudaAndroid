@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="@string/reconhe_a_seus_valores"
+                android:text="@string/seja_uma_pessoa_melhor_title"
                 android:layout_marginTop="@dimen/margin"
                 android:textColor="@color/red1"
                 android:textSize="@dimen/title_text"

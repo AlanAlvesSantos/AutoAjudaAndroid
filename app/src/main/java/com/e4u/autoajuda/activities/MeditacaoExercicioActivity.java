@@ -17,6 +17,7 @@ import com.e4u.autoajuda.modelos.VideoModelo;
 
 import java.util.ArrayList;
 import java.util.List;
+import static com.e4u.autoajuda.HomeActivity.NOTIFICATION_NOITE;
 
 public class MeditacaoExercicioActivity extends AppCompatActivity {
 
@@ -34,6 +35,7 @@ public class MeditacaoExercicioActivity extends AppCompatActivity {
         activity = this;
         rvVideos = findViewById(R.id.rvVideosMeditacao);
         txtTecnicas = findViewById(R.id.txtTecnicasMeditacao);
+        NOTIFICATION_NOITE = false;
 
         txtTecnicas.setOnClickListener(new View.OnClickListener() {
             @Override

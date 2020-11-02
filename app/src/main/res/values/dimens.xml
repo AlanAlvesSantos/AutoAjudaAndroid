@@ -11,4 +11,6 @@
     <dimen name="lottie_love_animation">@dimen/_160sdp</dimen>
     <dimen name="image_height">@dimen/_200sdp</dimen>
 
+    <dimen name="icon_home_size">72dp</dimen>
+
 </resources>
