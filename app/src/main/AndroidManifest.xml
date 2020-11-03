@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
+        <activity android:name=".activities.DozeSimplesAtividadesExercicioActivity"></activity>
         <activity android:name=".activities.ReconhecerSeuValorActivity" />
         <activity android:name=".activities.FraseDiaActivity" />
         <activity android:name=".activities.TecnicasMeditacaoActivity" />
@@ -56,4 +56,5 @@
             </intent-filter>
         </receiver>
     </application>
+
 </manifest>

@@ -16,6 +16,7 @@ public class ExerciciosActivity extends AppCompatActivity {
     CardView card2;
     CardView card3;
     CardView card4;
+    CardView card5;
 
     //criar variavel Cardview p card 2 e 3
 
@@ -44,6 +45,8 @@ public class ExerciciosActivity extends AppCompatActivity {
         card2 = findViewById(R.id.cardExercicio2);
         card3 = findViewById(R.id.cardExercicio3);
         card4 = findViewById(R.id.cardExercicio4);
+        card5 = findViewById(R.id.cardExercicio5);
+
 
         clickCardViewEvents();
     }
@@ -72,6 +75,12 @@ public class ExerciciosActivity extends AppCompatActivity {
         card4.setOnClickListener(v -> {
 
             Intent i3 = new Intent(ExerciciosActivity.this, ReconhecerSeuValorActivity.class);
+            startActivity(i3);
+        });
+
+        card5.setOnClickListener(v -> {
+
+            Intent i3 = new Intent(ExerciciosActivity.this, DozeSimplesAtividadesExercicioActivity.class);
             startActivity(i3);
         });
 
