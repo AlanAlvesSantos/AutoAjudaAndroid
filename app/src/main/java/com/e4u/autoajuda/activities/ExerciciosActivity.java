@@ -14,12 +14,10 @@ public class ExerciciosActivity extends AppCompatActivity {
 
     CardView card1;
     CardView card2;
-    CardView card3;
+    CardView cardExerciciodoDia;
     CardView card4;
     CardView card5;
-
-    //criar variavel Cardview p card 2 e 3
-
+    CardView cardDiario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +41,10 @@ public class ExerciciosActivity extends AppCompatActivity {
 
         card1 = findViewById(R.id.cardExercicio1);
         card2 = findViewById(R.id.cardExercicio2);
-        card3 = findViewById(R.id.cardExercicio3);
+        cardExerciciodoDia = findViewById(R.id.cardExercicioDoDia);
         card4 = findViewById(R.id.cardExercicio4);
         card5 = findViewById(R.id.cardExercicio5);
-
+        cardDiario = findViewById(R.id.cardDiario);
 
         clickCardViewEvents();
     }
@@ -66,7 +64,7 @@ public class ExerciciosActivity extends AppCompatActivity {
         });
 
         //Call daily exercise screen
-        card3.setOnClickListener(v -> {
+        cardExerciciodoDia.setOnClickListener(v -> {
 
             Intent i3 = new Intent(ExerciciosActivity.this, ExercicioDoDiaActivity.class);
             startActivity(i3);
@@ -81,6 +79,12 @@ public class ExerciciosActivity extends AppCompatActivity {
         card5.setOnClickListener(v -> {
 
             Intent i3 = new Intent(ExerciciosActivity.this, DozeSimplesAtividadesExercicioActivity.class);
+            startActivity(i3);
+        });
+
+        cardDiario.setOnClickListener(v -> {
+
+            Intent i3 = new Intent(ExerciciosActivity.this, ListaDiarioActivity.class);
             startActivity(i3);
         });
 

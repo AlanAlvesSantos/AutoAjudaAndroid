@@ -29,7 +29,7 @@
 
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardExercicio3"
+                android:id="@+id/cardExercicioDoDia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtExerciciosTitle"
@@ -72,11 +72,56 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardDiario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardExercicioDoDia"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/imgDiario"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img12"
+                        android:transitionName="img" />
+
+                    <ImageView
+                        android:id="@+id/shadow_bottom_Diario"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_alignBottom="@+id/imgDiario"
+                        android:src="@drawable/bottom_shadow" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="150dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/meu_di_rio"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardExercicio1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cardExercicio3"
+                android:layout_below="@id/cardDiario"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:clickable="true"

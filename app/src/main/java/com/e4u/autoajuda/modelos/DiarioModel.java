@@ -11,7 +11,7 @@ public class DiarioModel {
 
     private String data;
 
-    private int avaliacao;
+    private float avaliacao;
 
     private String textoDia;
 
@@ -31,11 +31,11 @@ public class DiarioModel {
         this.data = data;
     }
 
-    public int getAvaliacao() {
+    public float getAvaliacao() {
         return avaliacao;
     }
 
-    public void setAvaliacao(int avaliacao) {
+    public void setAvaliacao(float avaliacao) {
         this.avaliacao = avaliacao;
     }
 

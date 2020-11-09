@@ -3,21 +3,16 @@ package com.e4u.autoajuda;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PowerManager;
 import android.view.MenuItem;
-import android.view.View;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-
 import com.e4u.autoajuda.activities.ExerciciosActivity;
 import com.e4u.autoajuda.activities.FraseDiaActivity;
 import com.e4u.autoajuda.fragmentos.HomeFragment;
 import com.e4u.autoajuda.fragmentos.NoticiasFragment;
 import com.e4u.autoajuda.fragmentos.VideoFragment;
-import com.e4u.autoajuda.work.WorkNotifications;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity {

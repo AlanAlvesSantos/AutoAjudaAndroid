@@ -25,12 +25,22 @@
             android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDiario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txtTituloListaDiario"
-            android:layout_margin="@dimen/_12sdp" />
+            android:layout_below="@id/txtTituloListaDiario" />
 
     </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddDiario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/_16sdp"
+        android:contentDescription="@string/adicionar_di_rio"
+        android:src="@drawable/plus" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

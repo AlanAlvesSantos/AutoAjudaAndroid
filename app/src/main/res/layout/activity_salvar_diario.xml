@@ -34,8 +34,8 @@
             android:layout_marginTop="@dimen/_12sdp"
             android:numStars="5"
             android:saveEnabled="true"
-            android:scaleX=".7"
-            android:scaleY=".7"
+            android:scaleX="1"
+            android:scaleY="1"
             android:stepSize="1"
             android:transformPivotX="0dp"
             android:transformPivotY="0dp" />
@@ -49,6 +49,7 @@
             android:layout_marginEnd="@dimen/_8sdp"
             android:lineSpacingExtra="@dimen/_4sdp"
             android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/edittext_background"
             android:lines="8"
             android:minLines="6"
             android:maxLines="12"
@@ -65,9 +66,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/edtDiario"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_24sdp"
+            android:background="@drawable/button_close"
+            android:textColor="#f8f8f8"
+            android:layout_marginTop="@dimen/_36sdp"
             android:text="@string/salvar"
-            android:padding="@dimen/_12sdp" />
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            android:paddingStart="@dimen/_32sdp"
+            android:paddingEnd="@dimen/_32sdp"/>
 
 
     </RelativeLayout>

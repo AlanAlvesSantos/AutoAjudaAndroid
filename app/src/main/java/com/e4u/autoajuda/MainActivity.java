@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Window;
-import android.view.WindowManager;
-
 import com.airbnb.lottie.LottieAnimationView;
 import com.e4u.autoajuda.work.WorkNotifications;
 import com.google.android.gms.ads.AdListener;
