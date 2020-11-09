@@ -73,4 +73,9 @@ public class DiarioRepositorio {
 
         return bancodeDadosAutoAjuda.diarioDAO().retornarDiario();
     }
+
+    public LiveData<List<DiarioModel>> retornarDiario(int id) {
+
+        return bancodeDadosAutoAjuda.diarioDAO().retornarDiarioAlterar(id);
+    }
 }

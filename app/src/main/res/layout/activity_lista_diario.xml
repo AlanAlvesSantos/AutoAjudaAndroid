@@ -28,7 +28,24 @@
             android:id="@+id/rvDiario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
             android:layout_below="@id/txtTituloListaDiario" />
+
+        <TextView
+            android:id="@+id/txtListaVazia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/diario_vazio_msg"
+            android:layout_centerVertical="true"
+            android:lineSpacingExtra="@dimen/_6sdp"
+            android:gravity="center"
+            android:layout_below="@+id/txtTituloListaDiario"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:textColor="@color/red1"
+            android:textSize="@dimen/title_text" />
 
     </RelativeLayout>
 

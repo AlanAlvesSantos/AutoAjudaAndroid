@@ -46,7 +46,9 @@ public class DiarioAdapter extends RecyclerView.Adapter<DiarioAdapter.VHItems> {
 
                 Intent intent = new Intent(mContext, SalvarDiarioActivity.class);
                 intent.putExtra("id", model.getDiarioID());
-                mContext.startActivity(intent);
+                intent.putExtra("rating", model.getAvaliacao());
+                intent.putExtra("texto", model.getTextoDia());
+                mContext.startActivityForResult(intent, 10200);
             }
         });
     }

@@ -1,6 +1,8 @@
 package com.e4u.autoajuda.activities;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.e4u.autoajuda.R;
 import com.e4u.autoajuda.adapter.DiarioAdapter;
@@ -26,6 +29,7 @@ public class ListaDiarioActivity extends AppCompatActivity {
     List<DiarioModel> listaDiario = new ArrayList<>();
     DiarioRepositorio diarioRepositorio;
     FloatingActionButton fabAddDiario;
+    TextView txtListaVazia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,18 +38,27 @@ public class ListaDiarioActivity extends AppCompatActivity {
         diarioRepositorio = new DiarioRepositorio(this);
         setContentView(R.layout.activity_lista_diario);
         rvDiario = findViewById(R.id.rvDiario);
+        txtListaVazia = findViewById(R.id.txtListaVazia);
 
         fabAddDiario = findViewById(R.id.fabAddDiario);
 
         fabAddDiario.setOnClickListener(v -> {
 
+            //Chama a tela Salvar diario
             Intent i = new Intent(ListaDiarioActivity.this, SalvarDiarioActivity.class);
-            startActivity(i);
+            startActivityForResult(i, 10200);
         });
 
-        carregarLista();
-    }
 
+        diarioRepositorio.retornarListaDiario().observe(this, new Observer<List<DiarioModel>>() {
+            @Override
+            public void onChanged(@Nullable List<DiarioModel> list) {
+
+                listaDiario = list;
+                carregarLista();
+            }
+        });
+    }
 
     private void carregarLista() {
 
@@ -57,8 +70,29 @@ public class ListaDiarioActivity extends AppCompatActivity {
             rvDiario.setLayoutManager(mLayoutManager);
             rvDiario.setItemAnimator(new DefaultItemAnimator());
             rvDiario.setAdapter(diarioAdapter);
+            txtListaVazia.setVisibility(View.GONE);
         } else {
-            rvDiario.setVisibility(View.INVISIBLE);
+            rvDiario.setVisibility(View.GONE);
+            txtListaVazia.setVisibility(View.VISIBLE);
+        }
+    }
+
+    //retorna o resultado da tela chamada
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 10200) {
+
+            diarioRepositorio.retornarListaDiario().observe(this, new Observer<List<DiarioModel>>() {
+                @Override
+                public void onChanged(@Nullable List<DiarioModel> list) {
+
+                    listaDiario = list;
+                    carregarLista();
+                }
+            });
         }
     }
 }

@@ -62,4 +62,5 @@
     <string name="conte_ao_seu_di_rio_como_foi_o_seu_dia">Conte ao seu diário como foi o seu dia</string>
     <string name="salvar">Salvar</string>
     <string name="adicionar_di_rio">Adicionar diário</string>
+    <string name="diario_vazio_msg">Seu diário ainda está vazio.\nClique no botão abaixo para preencher seu diário.</string>
 </resources>

@@ -20,6 +20,9 @@ public interface DiarioDAO {
     @Query("SELECT * FROM TB_DIARIO ORDER BY diarioID desc")
     LiveData<List<DiarioModel>> retornarDiario();
 
+    @Query("SELECT * FROM TB_DIARIO WHERE diarioID=:id")
+    LiveData<List<DiarioModel>> retornarDiarioAlterar(int id);
+
     @Update
     void alterarDiario(DiarioModel diarioModel);
 
