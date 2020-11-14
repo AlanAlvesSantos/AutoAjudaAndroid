@@ -22,12 +22,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import static android.app.Notification.DEFAULT_SOUND;
+import static android.app.Notification.DEFAULT_VIBRATE;
+
 public class WorkNotifications extends Worker {
 
     private final String CHANNEL_ID = "personal_channel";
     private static final String uniqueWorkName = "com.e4u.autoajuda.work.WorkNotifications";
-    private static final long repeatIntervalMin = 6;
-    private static final long flexIntervalMin = 1;
+    private static final long repeatIntervalMin = 15;
+    private static final long flexIntervalMin = 15;
 
     public WorkNotifications(
             @NonNull Context context,
@@ -38,7 +41,7 @@ public class WorkNotifications extends Worker {
 
     private static PeriodicWorkRequest getOwnWorkRequest() {
         return new PeriodicWorkRequest.Builder(
-                WorkNotifications.class, repeatIntervalMin, TimeUnit.HOURS, flexIntervalMin, TimeUnit.HOURS
+                WorkNotifications.class, repeatIntervalMin, TimeUnit.MINUTES, flexIntervalMin, TimeUnit.MINUTES
         ).build();
     }
 
@@ -73,21 +76,24 @@ public class WorkNotifications extends Worker {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID,
                     "Exercício",
-                    NotificationManager.IMPORTANCE_DEFAULT);
+                    NotificationManager.IMPORTANCE_HIGH);
             channel.setDescription("Novo Exercício");
+            channel.setShowBadge(true);
             mNotificationManager.createNotificationChannel(channel);
         }
-
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
-                .setSmallIcon(R.drawable.logo)
-                .setContentTitle(title)
-                .setContentText(message)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setAutoCancel(true);
 
         Intent intentLista = new Intent(getApplicationContext(), HomeActivity.class);
         intentLista.putExtra("notification", "YES");
         PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intentLista, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_butterfly)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setDefaults(DEFAULT_SOUND | DEFAULT_VIBRATE) //Important for heads-up notification
+                .setPriority(NotificationCompat.PRIORITY_MAX)
+                .setFullScreenIntent(pi, true);
+
         mBuilder.setContentIntent(pi);
         mNotificationManager.notify(0, mBuilder.build());
     }
@@ -102,21 +108,24 @@ public class WorkNotifications extends Worker {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID,
                     "Frase",
-                    NotificationManager.IMPORTANCE_DEFAULT);
+                    NotificationManager.IMPORTANCE_HIGH);
             channel.setDescription("Frase do dia");
+            channel.setShowBadge(true);
             mNotificationManager.createNotificationChannel(channel);
         }
-
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
-                .setSmallIcon(R.drawable.logo)
-                .setContentTitle(title)
-                .setContentText(message)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setAutoCancel(true);
 
         Intent intentLista = new Intent(getApplicationContext(), HomeActivity.class);
         intentLista.putExtra("notificationTarde", "YES");
         PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intentLista, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_butterfly)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setDefaults(DEFAULT_SOUND | DEFAULT_VIBRATE) //Important for heads-up notification
+                .setPriority(NotificationCompat.PRIORITY_MAX)
+                .setFullScreenIntent(pi, true);
+
         mBuilder.setContentIntent(pi);
         mNotificationManager.notify(0, mBuilder.build());
 
@@ -132,21 +141,24 @@ public class WorkNotifications extends Worker {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID,
                     "Meditação",
-                    NotificationManager.IMPORTANCE_DEFAULT);
+                    NotificationManager.IMPORTANCE_HIGH);
             channel.setDescription("Meditação");
+            channel.setShowBadge(true);
             mNotificationManager.createNotificationChannel(channel);
         }
-
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
-                .setSmallIcon(R.drawable.logo)
-                .setContentTitle(title)
-                .setContentText(message)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setAutoCancel(true);
 
         Intent intentLista = new Intent(getApplicationContext(), HomeActivity.class);
         intentLista.putExtra("notificationNoite", "YES");
         PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intentLista, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_butterfly)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setDefaults(DEFAULT_SOUND | DEFAULT_VIBRATE) //Important for heads-up notification
+                .setPriority(NotificationCompat.PRIORITY_MAX)
+                .setFullScreenIntent(pi, true);
+
         mBuilder.setContentIntent(pi);
         mNotificationManager.notify(0, mBuilder.build());
     }
