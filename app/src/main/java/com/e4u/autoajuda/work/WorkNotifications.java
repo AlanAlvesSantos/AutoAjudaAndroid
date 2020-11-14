@@ -29,8 +29,8 @@ public class WorkNotifications extends Worker {
 
     private final String CHANNEL_ID = "personal_channel";
     private static final String uniqueWorkName = "com.e4u.autoajuda.work.WorkNotifications";
-    private static final long repeatIntervalMin = 15;
-    private static final long flexIntervalMin = 15;
+    private static final long repeatIntervalMin = 5;
+    private static final long flexIntervalMin = 1;
 
     public WorkNotifications(
             @NonNull Context context,
@@ -41,7 +41,7 @@ public class WorkNotifications extends Worker {
 
     private static PeriodicWorkRequest getOwnWorkRequest() {
         return new PeriodicWorkRequest.Builder(
-                WorkNotifications.class, repeatIntervalMin, TimeUnit.MINUTES, flexIntervalMin, TimeUnit.MINUTES
+                WorkNotifications.class, repeatIntervalMin, TimeUnit.HOURS, flexIntervalMin, TimeUnit.HOURS
         ).build();
     }
 
