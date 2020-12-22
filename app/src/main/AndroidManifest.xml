@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.ListaDiarioActivity"></activity>
+        <activity android:name=".activities.AutoAjudaParaCriancaActivity"></activity>
+        <activity android:name=".activities.ListaDiarioActivity" />
         <activity android:name=".activities.SalvarDiarioActivity" />
         <activity android:name=".activities.DozeSimplesAtividadesExercicioActivity" />
         <activity android:name=".activities.ReconhecerSeuValorActivity" />
