@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import com.airbnb.lottie.LottieAnimationView;
 import com.e4u.autoajuda.R;
 import com.e4u.autoajuda.activities.AmizadeActivity;
+import com.e4u.autoajuda.activities.AutoAjudaParaCriancaActivity;
 import com.e4u.autoajuda.activities.EstudosActivity;
 import com.e4u.autoajuda.activities.ExerciciosActivity;
 import com.e4u.autoajuda.activities.FraseDiaActivity;
@@ -41,6 +42,7 @@ public class HomeFragment extends Fragment {
     LinearLayout llSaude;
     LinearLayout llFrases;
     LinearLayout llAvaliar;
+    LinearLayout llFilho;
 
     private String mParam1;
     private String mParam2;
@@ -174,6 +176,16 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
 
                 ratingApp();
+            }
+        });
+
+        llFilho = view.findViewById(R.id.llFilho);
+        llFilho.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getContext(), AutoAjudaParaCriancaActivity.class);
+                startActivity(intent);
             }
         });
     }
