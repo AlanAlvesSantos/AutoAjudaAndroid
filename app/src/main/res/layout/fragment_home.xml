@@ -62,8 +62,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/llMotivacao"
-                android:layout_marginTop="24dp"
                 android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
@@ -88,8 +88,8 @@
                 android:layout_below="@id/llMotivacao"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="24dp"
-                android:layout_marginBottom="48dp"
                 android:layout_marginEnd="24dp"
+                android:layout_marginBottom="48dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
@@ -143,8 +143,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/llTrabalho"
-                android:layout_marginTop="24dp"
                 android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
@@ -153,6 +153,7 @@
                     android:layout_width="@dimen/icon_home_size"
                     android:layout_height="@dimen/icon_home_size"
                     android:src="@drawable/ic_estudos" />
+
                 <TextView
                     android:id="@+id/txtEstudos"
                     android:layout_width="wrap_content"
@@ -196,9 +197,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/llPessoaMelhor"
-                android:layout_marginTop="24dp"
-                android:layout_marginStart="24dp"
                 android:layout_centerHorizontal="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -226,8 +227,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/llRelacionamento"
-                android:layout_marginTop="24dp"
                 android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginBottom="48dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
@@ -280,10 +281,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/llAmizade"
-                android:layout_marginTop="24dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginBottom="36dp"
                 android:layout_centerHorizontal="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="36dp"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -310,8 +311,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/llAvaliar"
-                android:layout_marginTop="24dp"
                 android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginBottom="48dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
@@ -327,7 +328,36 @@
                     android:layout_gravity="center"
                     android:text="@string/auto_ajuda_para_filhos_texto"
                     android:textColor="@color/red1" />
+
+
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFrasesAmor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llAvaliar"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="48dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_home_size"
+                    android:layout_height="@dimen/icon_home_size"
+                    android:src="@drawable/iconefraseamor2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/frases_para_amor"
+                    android:textColor="@color/red1" />
+            </LinearLayout>
+
 
         </RelativeLayout>
 
