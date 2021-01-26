@@ -72,6 +72,26 @@ public class MeditacaoExercicioActivity extends AppCompatActivity {
         videoModelo.setVideoURL("mzAqzL2XIQA");
         listaVideos.add(videoModelo);
 
+        videoModelo = new VideoModelo();
+        videoModelo.setVideoTitle("Meditação para iniciantes");
+        videoModelo.setVideoURL("zfy24tsbuI4");
+        listaVideos.add(videoModelo);
+
+        videoModelo = new VideoModelo();
+        videoModelo.setVideoTitle("Meditação Guiada - Para amor próprio");
+        videoModelo.setVideoURL("LUHspFWn0q4");
+        listaVideos.add(videoModelo);
+
+        videoModelo = new VideoModelo();
+        videoModelo.setVideoTitle("Meditação para relacionamento");
+        videoModelo.setVideoURL("7R12KBLoMDU");
+        listaVideos.add(videoModelo);
+
+        videoModelo = new VideoModelo();
+        videoModelo.setVideoTitle("Meditação para atrair a realidade que deseja");
+        videoModelo.setVideoURL("xSJH6H5XFG0");
+        listaVideos.add(videoModelo);
+
         adapter = new VideoAdapter(activity, listaVideos);
 
         if (listaVideos.size() > 0) {
