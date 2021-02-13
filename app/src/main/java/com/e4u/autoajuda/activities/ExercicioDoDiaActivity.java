@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -39,6 +42,7 @@ public class ExercicioDoDiaActivity extends AppCompatActivity {
     TextView txtDescricaoDoExercicio;
     Activity activity;
     String parsedString = "";
+    LinearLayout llCompartilharExercicio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,16 @@ public class ExercicioDoDiaActivity extends AppCompatActivity {
         imgexerciciododia = findViewById(R.id.imgexerciciododia);
         txtTitulo = findViewById(R.id.txtTitulo);
         txtDescricaoDoExercicio = findViewById(R.id.txtDescricaoDoExercicio);
+        llCompartilharExercicio = findViewById(R.id.llCompartilharExercicio);
+
+        llCompartilharExercicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                compartilharExercicioDia();
+            }
+        });
+
         getData();
 
         try {
@@ -157,7 +171,6 @@ public class ExercicioDoDiaActivity extends AppCompatActivity {
             JSONObject json = new JSONObject(parsedString);
             JSONArray array = json.getJSONArray("ExercicioDia");
             NewsModelo exercicio = null;
-            boolean add = false;
 
             for (int i = 0; i < array.length(); i++) {
                 exercicio = new NewsModelo();
@@ -169,7 +182,6 @@ public class ExercicioDoDiaActivity extends AppCompatActivity {
                 exercicio.setDescription(object.getString("description"));
             }
 
-
             txtDescricaoDoExercicio.setText(exercicio.getDescription());
             txtTitulo.setText(exercicio.getTitle());
 
@@ -178,10 +190,20 @@ public class ExercicioDoDiaActivity extends AppCompatActivity {
                     .centerCrop()
                     .into(imgexerciciododia);
 
-
+            llCompartilharExercicio.setVisibility(View.VISIBLE);
 
         } catch (JSONException ex) {
 
         }
+    }
+
+    private void compartilharExercicioDia(){
+
+        Intent shareIntent = new Intent(android.content.Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Exercício do dia do Aplicativo Auto Ajuda");
+        String shareMessage = txtTitulo.getText().toString() + " " + txtDescricaoDoExercicio.getText().toString();
+        shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareMessage);
+        startActivity(Intent.createChooser(shareIntent, "Compartilhe o exercício do dia"));
     }
 }
