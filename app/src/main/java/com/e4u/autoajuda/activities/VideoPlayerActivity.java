@@ -73,7 +73,7 @@ public class VideoPlayerActivity extends YouTubeBaseActivity implements YouTubeP
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                      WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
 
