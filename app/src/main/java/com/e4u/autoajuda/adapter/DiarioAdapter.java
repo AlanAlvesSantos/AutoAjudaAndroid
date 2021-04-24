@@ -37,7 +37,13 @@ public class DiarioAdapter extends RecyclerView.Adapter<DiarioAdapter.VHItems> {
         final DiarioModel model = arrayList.get(position);
 
         holder.txtDataDiario.setText(model.getData());
-        holder.txtDescricaoDiario.setText(model.getTextoDia());
+
+        if(model.getTextoDia().length() > 60){
+            holder.txtDescricaoDiario.setText(model.getTextoDia().substring(0, 100) + " ...");
+        }else{
+            holder.txtDescricaoDiario.setText(model.getTextoDia());
+        }
+
         holder.rating.setRating(model.getAvaliacao());
 
         holder.cardDiario.setOnClickListener(new View.OnClickListener() {
