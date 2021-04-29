@@ -13,7 +13,7 @@ import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.e4u.autoajuda.R;
-import com.e4u.autoajuda.database.DiarioRepositorio;
+import com.e4u.autoajuda.repositorio.DiarioRepositorio;
 import com.e4u.autoajuda.modelos.DiarioModel;
 
 import java.text.SimpleDateFormat;

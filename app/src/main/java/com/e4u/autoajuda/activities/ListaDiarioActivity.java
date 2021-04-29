@@ -14,8 +14,7 @@ import android.widget.TextView;
 
 import com.e4u.autoajuda.R;
 import com.e4u.autoajuda.adapter.DiarioAdapter;
-import com.e4u.autoajuda.adapter.NewsAdapter;
-import com.e4u.autoajuda.database.DiarioRepositorio;
+import com.e4u.autoajuda.repositorio.DiarioRepositorio;
 import com.e4u.autoajuda.modelos.DiarioModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
