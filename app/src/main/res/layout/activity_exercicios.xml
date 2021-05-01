@@ -72,12 +72,11 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardDiario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cardExercicioDoDia"
+                android:layout_below="@+id/cardListaMetas"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:clickable="true"
@@ -86,7 +85,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/imgDiario"
@@ -117,6 +116,54 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
+
+
+            <!---lista de metas-->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardListaMetas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardExercicioDoDia"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgListaMetas"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/imgmetas2"
+                        android:transitionName="img" />
+
+                    <ImageView
+                        android:id="@+id/shadow_bottom_"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_alignBottom="@+id/imgListaMetas"
+                        android:src="@drawable/bottom_shadow" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="150dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/minhas_metas"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardExercicio1"
                 android:layout_width="wrap_content"
@@ -130,7 +177,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/img1"
@@ -174,7 +221,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/img2"
@@ -218,7 +265,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/img4"
@@ -262,7 +309,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/img5"

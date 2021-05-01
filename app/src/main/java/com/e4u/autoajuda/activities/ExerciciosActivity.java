@@ -18,6 +18,7 @@ public class ExerciciosActivity extends AppCompatActivity {
     CardView card4;
     CardView card5;
     CardView cardDiario;
+    CardView cardListaMetas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class ExerciciosActivity extends AppCompatActivity {
         card4 = findViewById(R.id.cardExercicio4);
         card5 = findViewById(R.id.cardExercicio5);
         cardDiario = findViewById(R.id.cardDiario);
+        cardListaMetas = findViewById(R.id.cardListaMetas);
 
         clickCardViewEvents();
     }
@@ -85,6 +87,12 @@ public class ExerciciosActivity extends AppCompatActivity {
         cardDiario.setOnClickListener(v -> {
 
             Intent i3 = new Intent(ExerciciosActivity.this, ListaDiarioActivity.class);
+            startActivity(i3);
+        });
+
+        cardListaMetas.setOnClickListener(v -> {
+
+            Intent i3 = new Intent(ExerciciosActivity.this, ObjetivosListaActivity.class);
             startActivity(i3);
         });
 
