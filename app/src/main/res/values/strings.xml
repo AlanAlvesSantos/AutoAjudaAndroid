@@ -75,4 +75,16 @@
     <string name="lista_de_objetivos">Lista de Objetivos</string>
     <string name="sua_lista_ainda_est_vazia_adicione_uma_meta_clicando_no_bot_o_abaixo">Sua lista ainda está vazia.\nAdicione uma meta clicando no botão abaixo.</string>
     <string name="minhas_metas">Minhas Metas</string>
+    <string name="criar_meta_objetivo">Criar Meta/Objetivo</string>
+    <string name="qual_a_sua_meta">Qual a sua meta?</string>
+    <string name="gravar_meta">Gravar meta</string>
+    <string name="adicionar_imagem"><u>Adicionar Imagem</u></string>
+    <string name="message_error_meta">Por favor, insira o texto da sua meta</string>
+
+    <string name="selecionar">Selecionar</string>
+    <string name="camera">Câmera</string>
+    <string name="galeria">Galeria</string>
+    <string name="erro_permissao_galeria">O aplicativo precisa de permissão de acesso as suas imagens</string>
+    <string name="excluir_meta">Excluir meta</string>
+
 </resources>

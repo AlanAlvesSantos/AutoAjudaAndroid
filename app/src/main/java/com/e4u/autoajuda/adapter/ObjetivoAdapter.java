@@ -10,12 +10,15 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.e4u.autoajuda.R;
 import com.e4u.autoajuda.activities.ObjetivosSalvarActivity;
 import com.e4u.autoajuda.modelos.ItemListaModel;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by Felipe Carvalho on 29-04-2021
@@ -41,7 +44,12 @@ public class ObjetivoAdapter extends RecyclerView.Adapter<ObjetivoAdapter.VHItem
 
         final ItemListaModel model = arrayList.get(position);
 
-        holder.txtTituloObjetivo.setText(model.getItemTitle());
+        holder.txtTituloObjetivo.setText(model.getItemDescription());
+
+
+        if (!model.getItemImagem().equals(""))
+            Glide.with(mContext).load(model.getItemImagem()).into(holder.imgMeta);
+
 
         holder.cardObjetivo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +70,7 @@ public class ObjetivoAdapter extends RecyclerView.Adapter<ObjetivoAdapter.VHItem
     class VHItems extends RecyclerView.ViewHolder {
         TextView txtTituloObjetivo;
         CardView cardObjetivo;
+        CircleImageView imgMeta;
 
         public VHItems(View itemView) {
 
@@ -69,6 +78,7 @@ public class ObjetivoAdapter extends RecyclerView.Adapter<ObjetivoAdapter.VHItem
 
             cardObjetivo = itemView.findViewById(R.id.cardObjetivo);
             txtTituloObjetivo = itemView.findViewById(R.id.txtTituloObjetivo);
+            imgMeta = itemView.findViewById(R.id.imgMeta);
         }
     }
 }
