@@ -69,7 +69,7 @@ public class SalvarDiarioActivity extends AppCompatActivity {
                 else
                     alterarDiario();
 
-                Toast.makeText(context, "Diário foi salvo com sucesso!", Toast.LENGTH_LONG).show();
+                Toast.makeText(context, getString(R.string.diario_salva_sucesso), Toast.LENGTH_LONG).show();
             }
         });
     }

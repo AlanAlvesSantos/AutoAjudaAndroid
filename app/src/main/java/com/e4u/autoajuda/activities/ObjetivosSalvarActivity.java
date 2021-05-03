@@ -134,9 +134,11 @@ public class ObjetivosSalvarActivity extends AppCompatActivity {
 
             if (id == 0) {
                 repository.insertOne(item);
+                Toast.makeText(context, getString(R.string.meta_salva_sucesso), Toast.LENGTH_LONG).show();
             } else {
                 item.setItemID(id);
                 repository.updateOne(item);
+                Toast.makeText(context, getString(R.string.meta_alterada_sucesso), Toast.LENGTH_LONG).show();
             }
 
             finish();
@@ -152,6 +154,7 @@ public class ObjetivosSalvarActivity extends AppCompatActivity {
         item.setItemType(Utils.METAS);
 
         repository.deleteOne(item);
+        Toast.makeText(context, getString(R.string.meta_excluida_sucesso), Toast.LENGTH_LONG).show();
         finish();
     }
 
