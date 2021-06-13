@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fundocor"
     tools:context=".activities.ObjetivosSalvarActivity">
 
 
@@ -63,7 +64,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:text="@string/adicionar_imagem"
-            android:textColor="#656565" />
+            android:textColor="@color/textocor" />
 
         <LinearLayout
             android:layout_width="wrap_content"

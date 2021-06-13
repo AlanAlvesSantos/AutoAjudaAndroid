@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/fundocor"
     android:layout_height="match_parent">
 
 
@@ -28,7 +29,7 @@
         android:lineSpacingExtra="3dp"
         android:text="@string/titulo1"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/textocor"
         android:textStyle="bold"
         android:layout_margin="@dimen/margin"
         android:textSize="@dimen/splash_text_size"

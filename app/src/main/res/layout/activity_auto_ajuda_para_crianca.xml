@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fundocor"
     tools:context=".activities.AutoAjudaParaCriancaActivity">
 
     <ScrollView
@@ -25,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="@string/auto_ajuda_para_filhos"
-                android:textColor="@color/red1"
+                android:textColor="@color/textocor"
                 android:layout_marginTop="@dimen/margin"
                 android:textSize="@dimen/title_text"
                 android:textStyle="bold" />
@@ -47,7 +48,7 @@
                 android:layout_margin="@dimen/margin"
                 android:text="@string/conteudo_auto_ajuda_para_filhos"
                 android:lineSpacingExtra="4dp"
-                android:textColor="@color/red1"
+                android:textColor="@color/textocor"
                 android:textSize="@dimen/normal_text" />
 
 

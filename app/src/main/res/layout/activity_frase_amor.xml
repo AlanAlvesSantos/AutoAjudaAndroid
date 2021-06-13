@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fundocor"
     tools:context=".activities.FraseAmorActivity">
 
 
@@ -78,7 +79,7 @@
                     android:gravity="center_horizontal"
                     android:layout_marginTop="@dimen/_2sdp"
                     android:text="@string/compartilhe_essa_frase_ncom_a_pessoa_amada"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/textocor" />
 
             </LinearLayout>
 

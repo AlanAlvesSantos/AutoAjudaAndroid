@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/fundocor"
     tools:context=".activities.NewsReadActivity">
 
     <LinearLayout
@@ -56,7 +56,7 @@
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:textStyle="bold"
-                            android:textColor="#060606"
+                            android:textColor="@color/textocor"
                             android:textSize="16sp" />
 
                         <TextView
@@ -66,7 +66,7 @@
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             android:paddingBottom="10dp"
-                            android:textColor="#595959"
+                            android:textColor="@color/textocor"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -84,7 +84,7 @@
                         android:layout_height="wrap_content"
                         android:lineSpacingExtra="4dp"
                         android:padding="10dp"
-                        android:textColor="#090909"
+                        android:textColor="@color/textocor"
                         android:textSize="14sp" />
 
                 </androidx.cardview.widget.CardView>
