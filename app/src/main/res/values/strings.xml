@@ -87,4 +87,12 @@
     <string name="erro_permissao_galeria">O aplicativo precisa de permissão de acesso as suas imagens</string>
     <string name="excluir_meta">Excluir meta</string>
 
+    <string name="meta_salva_sucesso">Sua meta foi criada com sucesso!</string>
+    <string name="meta_alterada_sucesso">Sua meta foi alterada com sucesso!</string>
+    <string name="meta_excluida_sucesso">Sua meta foi excluída com sucesso!</string>
+
+    <string name="diario_salva_sucesso">Registro gravado com sucesso!</string>
+    <string name="diario_alterada_sucesso">Seu diário foi alterado com sucesso!</string>
+    <string name="diario_excluida_sucesso">Registro excluído com sucesso!</string>
+
 </resources>
