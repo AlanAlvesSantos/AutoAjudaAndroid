@@ -38,7 +38,7 @@
                 android:layout_below="@+id/txtTituloFraseAmor"
                 android:layout_marginTop="@dimen/margin"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgfrasesamor3" />
+                android:src="@drawable/imgfrasesdeamorfree" />
 
             <TextView
                 android:id="@+id/txtFraseAmor"

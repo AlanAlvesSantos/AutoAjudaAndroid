@@ -38,7 +38,7 @@
                 android:layout_below="@+id/txtTitulo"
                 android:layout_marginTop="@dimen/margin"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgamizade" />
+                android:src="@drawable/imgamizadefree" />
 
             <TextView
                 android:id="@+id/txtTextoAmizade"

@@ -37,7 +37,7 @@
                 android:layout_below="@+id/txtTituloFrase"
                 android:layout_marginTop="@dimen/margin"
                 android:scaleType="fitXY"
-                android:src="@drawable/morning_city" />
+                android:src="@drawable/imgfrasedodiafree" />
 
             <TextView
                 android:id="@+id/txtFrase"

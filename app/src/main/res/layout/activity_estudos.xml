@@ -38,7 +38,7 @@
                 android:layout_below="@+id/txtTituloEstudo"
                 android:layout_marginTop="@dimen/margin"
                 android:scaleType="fitXY"
-                android:src="@drawable/student" />
+                android:src="@drawable/imgestudosfree" />
 
             <TextView
                 android:id="@+id/txtTextoEstudos"

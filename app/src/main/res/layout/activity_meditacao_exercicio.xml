@@ -28,7 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/image_height"
                     android:scaleType="fitXY"
-                    android:src="@drawable/imgmeditacao2" />
+                    android:src="@drawable/imgvideosmecicacaofree2" />
 
                 <TextView
                     android:id="@+id/txtTituloVideo"

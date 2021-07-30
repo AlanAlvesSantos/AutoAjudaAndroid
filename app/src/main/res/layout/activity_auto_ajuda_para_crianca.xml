@@ -38,7 +38,7 @@
                 android:layout_below="@+id/txtTitulo"
                 android:layout_marginTop="@dimen/margin"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgajudafilho" />
+                android:src="@drawable/imgajudafilhofree" />
 
             <TextView
                 android:id="@+id/txtTextoAutoAjudaFilho"

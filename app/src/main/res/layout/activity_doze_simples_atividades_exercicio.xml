@@ -38,7 +38,7 @@
                 android:layout_below="@+id/txtTituloSimplesAtividadesExercicio"
                 android:layout_marginTop="23dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/img12" />
+                android:src="@drawable/img12atividadesfree" />
 
             <TextView
                 android:id="@+id/txtSimplesAtividadesExercicio"

@@ -38,7 +38,7 @@
                 android:layout_below="@+id/txtTituloPessoaMelhor"
                 android:layout_marginTop="23dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgpessoamelhor" />
+                android:src="@drawable/imgsejaumapessoamelhorfree" />
 
             <TextView
                 android:id="@+id/txtPessoaMelhor"

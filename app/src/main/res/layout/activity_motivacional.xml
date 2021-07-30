@@ -38,7 +38,7 @@
                 android:layout_below="@+id/txtTituloMotivacional"
                 android:layout_marginTop="@dimen/margin"
                 android:scaleType="fitXY"
-                android:src="@drawable/motivation_img" />
+                android:src="@drawable/imgmotivacionalfree" />
 
             <TextView
                 android:id="@+id/txtTextoMotivacional"

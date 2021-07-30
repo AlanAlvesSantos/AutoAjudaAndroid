@@ -48,7 +48,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/imgexerciciosdodia2"
+                        android:src="@drawable/imgexerciciododiafree"
                         android:transitionName="img" />
 
                     <ImageView
@@ -94,7 +94,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/imgmetas2"
+                        android:src="@drawable/imgmetasfree"
                         android:transitionName="img" />
 
                     <ImageView
@@ -138,7 +138,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/diario"
+                        android:src="@drawable/imgmeudiariofree"
                         android:transitionName="img" />
 
                     <ImageView
@@ -182,7 +182,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/imgmeditacao1"
+                        android:src="@drawable/imgmeditacaofree"
                         android:transitionName="img" />
 
                     <ImageView
@@ -226,7 +226,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/imgrespiracaoqueacalma1"
+                        android:src="@drawable/imgtecnicasderespiracaofree"
                         android:transitionName="img" />
 
                     <ImageView
@@ -270,7 +270,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/imgreconhervalores"
+                        android:src="@drawable/imgseusvaloresfree"
                         android:transitionName="img" />
 
                     <ImageView
@@ -314,7 +314,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/img12"
+                        android:src="@drawable/img12atividadessimples2free"
                         android:transitionName="img" />
 
                     <ImageView
