@@ -44,7 +44,7 @@
                     android:id="@+id/imgMotivacao"
                     android:layout_width="@dimen/icon_home_size"
                     android:layout_height="@dimen/icon_home_size"
-                    android:src="@drawable/ic_motivacao" />
+                    android:src="@drawable/imgmotivacionalfree" />
 
                 <TextView
                     android:id="@+id/txtMotivacional"
@@ -70,7 +70,7 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="@dimen/icon_home_size"
                     android:layout_height="@dimen/icon_home_size"
-                    android:src="@drawable/imgexerciciosdodia3" />
+                    android:src="@drawable/imgmeudiariofree" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -97,7 +97,7 @@
                     android:id="@+id/imgFrases"
                     android:layout_width="@dimen/icon_home_size"
                     android:layout_height="@dimen/icon_home_size"
-                    android:src="@drawable/morning_city" />
+                    android:src="@drawable/imgfrasedodiafree" />
 
                 <TextView
                     android:id="@+id/txtFrases"
@@ -152,7 +152,7 @@
                     android:id="@+id/imgEstudos"
                     android:layout_width="@dimen/icon_home_size"
                     android:layout_height="@dimen/icon_home_size"
-                    android:src="@drawable/student" />
+                    android:src="@drawable/imgestudosfree" />
 
                 <TextView
                     android:id="@+id/txtEstudos"
@@ -177,7 +177,7 @@
                     android:id="@+id/imgPessoaMelhor"
                     android:layout_width="@dimen/icon_home_size"
                     android:layout_height="@dimen/icon_home_size"
-                    android:src="@drawable/imgpessoamelhor" />
+                    android:src="@drawable/imgsejaumapessoamelhorfree" />
 
                 <TextView
                     android:id="@+id/txtPessoaMelhor"
@@ -236,7 +236,7 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="@dimen/icon_home_size"
                     android:layout_height="@dimen/icon_home_size"
-                    android:src="@drawable/healthy" />
+                    android:src="@drawable/healthy_one" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -261,7 +261,7 @@
                     android:id="@+id/imgAmizade"
                     android:layout_width="@dimen/icon_home_size"
                     android:layout_height="@dimen/icon_home_size"
-                    android:src="@drawable/imgamizade" />
+                    android:src="@drawable/imgamizadefree" />
 
                 <TextView
                     android:id="@+id/txtAmizade"
@@ -320,7 +320,7 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="@dimen/icon_home_size"
                     android:layout_height="@dimen/icon_home_size"
-                    android:src="@drawable/imgajudafilho" />
+                    android:src="@drawable/imgajudafilhofree" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -348,7 +348,7 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="@dimen/icon_home_size"
                     android:layout_height="@dimen/icon_home_size"
-                    android:src="@drawable/iconefraseamor2" />
+                    android:src="@drawable/imgfrasesdeamorfree" />
 
                 <TextView
                     android:layout_width="wrap_content"

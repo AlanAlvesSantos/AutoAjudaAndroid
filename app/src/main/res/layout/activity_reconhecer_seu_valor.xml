@@ -37,7 +37,7 @@
                 android:layout_below="@+id/txtTituloReconhecimento"
                 android:layout_marginTop="23dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgreconhervalores" />
+                android:src="@drawable/imgreconhecaseusvaloresfree" />
 
             <TextView
                 android:id="@+id/txtExercicioIntro"
