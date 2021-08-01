@@ -13,8 +13,8 @@ android {
         applicationId "com.e4u.autoajuda"
         minSdkVersion 18
         targetSdkVersion 30
-        versionCode 10
-        versionName "10.0"
+        versionCode 11
+        versionName "11.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
