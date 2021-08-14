@@ -59,7 +59,7 @@
                 android:visibility="gone"
                 android:layout_marginTop="@dimen/margin"
                 android:scaleType="fitXY"
-                android:src="@drawable/imgtecnicarespiracao2" />
+                android:src="@drawable/imgtecnicarespiracao3" />
 
             <TextView
                 android:id="@+id/txtTR2"
