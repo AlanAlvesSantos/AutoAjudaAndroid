@@ -1,5 +1,7 @@
 package com.e4u.autoajuda.activities;
 
+import static com.e4u.autoajuda.MainActivity.mInterstitialAd;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -54,6 +56,13 @@ public class FraseDiaActivity extends AppCompatActivity {
         });
 
         carregarFrases();
+
+        try {
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            }
+        } catch (Exception ex) {
+        }
     }
 
     private void compartilharFrase(){

@@ -1,5 +1,7 @@
 package com.e4u.autoajuda.activities;
 
+import static com.e4u.autoajuda.MainActivity.mInterstitialAd;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -57,6 +59,13 @@ public class ListaDiarioActivity extends AppCompatActivity {
                 carregarLista();
             }
         });
+
+        try {
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            }
+        } catch (Exception ex) {
+        }
     }
 
     private void carregarLista() {
