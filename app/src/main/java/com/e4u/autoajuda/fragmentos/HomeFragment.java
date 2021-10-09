@@ -24,6 +24,7 @@ import com.e4u.autoajuda.activities.FraseDiaActivity;
 import com.e4u.autoajuda.activities.MotivacionalActivity;
 import com.e4u.autoajuda.activities.PessoaMelhorActivity;
 import com.e4u.autoajuda.activities.RelacionamentoActivity;
+import com.e4u.autoajuda.activities.RotinaMatinalActivity;
 import com.e4u.autoajuda.activities.SaudeActivity;
 import com.e4u.autoajuda.activities.TrabalhoActivity;
 import com.e4u.autoajuda.activities.VideoPlayerActivity;
@@ -45,6 +46,7 @@ public class HomeFragment extends Fragment {
     LinearLayout llAvaliar;
     LinearLayout llFilho;
     LinearLayout llFrasesAmor;
+    LinearLayout llRotinaMatinal;
 
     private String mParam1;
     private String mParam2;
@@ -88,6 +90,16 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
 
                 Intent intent = new Intent(getContext(), RelacionamentoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        llRotinaMatinal = view.findViewById(R.id.llRotinaMatinal);
+        llRotinaMatinal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getContext(), RotinaMatinalActivity.class);
                 startActivity(intent);
             }
         });

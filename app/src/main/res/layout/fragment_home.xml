@@ -358,6 +358,35 @@
                     android:textColor="@color/red1" />
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/llRotinaMatinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llFilho"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="36dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/icon_home_size"
+                    android:layout_height="@dimen/icon_home_size"
+                    android:src="@drawable/imgrotinamatinal" />
+
+
+
+                <TextView
+                    android:id="@+id/txtRotinaMatinal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/rotina_matinal"
+                    android:textColor="@color/red1" />
+            </LinearLayout>
+
 
         </RelativeLayout>
 

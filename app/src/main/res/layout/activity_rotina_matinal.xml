@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RotinaMatinalActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@string/rotina_matinal"
+            android:textColor="@color/red1"
+            android:textSize="@dimen/title_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtRotina1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitulo"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="4dp"
+            android:text="rrrrrrrr"
+            android:textColor="@color/red1"
+            android:textSize="@dimen/frase_text" />
+
+        <TextView
+            android:id="@+id/txtRotina2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtRotina1"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="4dp"
+            android:text="rrrrrrrr"
+            android:textColor="@color/red1"
+            android:textSize="@dimen/frase_text" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

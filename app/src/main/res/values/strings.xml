@@ -94,5 +94,22 @@
     <string name="diario_salva_sucesso">Registro gravado com sucesso!</string>
     <string name="diario_alterada_sucesso">Seu diário foi alterado com sucesso!</string>
     <string name="diario_excluida_sucesso">Registro excluído com sucesso!</string>
+    <string name="rotina_matinal">Rotina Matinal</string>
+
+    <string name="r1">Organize os seus principais afazeres que precisam serem realizados hoje.</string>
+    <string name="r2">Faça uma oração de agradecimento a Jesus Cristo.</string>
+    <string name="r3">Beba pelo menos 2 litros de água durante todo o dia.</string>
+    <string name="r4">Se programe para ficar uma parte do seu dia com uma pessoa que você goste.</string>
+    <string name="r5">Ligue para saber como está seus pais.</string>
+    <string name="r6">Elogie seu melhor amigo.</string>
+    <string name="r7">Leve uma pessoa que você gosta para passear.</string>
+    <string name="r8">Comece a ler um livro.</string>
+    <string name="r9">Procure ser mais paciente com pessoas importante na sua vida.</string>
+    <string name="r10">Estude pelo menos mais um idioma.</string>
+    <string name="r11">Guarde dinheiro para emergências que podem aparecer na sua vida.</string>
+    <string name="r12">Colecione momentos não coisas.</string>
+    <string name="r13">Pratique um esporte.</string>
+    <string name="r14">Procure ter mais contato com a natureza.</string>
+
 
 </resources>
